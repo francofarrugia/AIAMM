@@ -93,13 +93,14 @@ else:
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Reward weights — normalized to sum = 1.0 (IEEE fix)
-# Raw: (0.60, 0.30, 0.10, 0.05), normalized by dividing by sum=1.05
+# Raw: (0.60, 0.30, 0.10, 0.40), normalized by dividing by sum=1.40
 # ─────────────────────────────────────────────────────────────────────────────
-_W_RAW = np.array([0.60, 0.30, 0.10, 0.05])
+_W_RAW = np.array([0.60, 0.30, 0.10, 0.40])
 W = _W_RAW / _W_RAW.sum()
 W1, W2, W3, W4 = W   # 0.5714, 0.2857, 0.0952, 0.0476
 
-RANGE_HALF_WIDTH = 0.20   # FIX BUG 3: widened from 0.12 to 0.20
+RANGE_HALF_WIDTH = 0.40   # Real-data tuned: ±40% for real ETH/USDC volatility
+MIN_COOLDOWN    = 5     # Minimum steps between rebalances (caps over-trading)
 
 EECResult = namedtuple("EECResult", ["ai_val", "static_val", "alpha", "win_pct", "p_val"])
 
@@ -462,9 +463,9 @@ class RLAgentBase:
         elif active_frac < 0.1:
             reward -= 0.05 * (1.0 - active_frac)
         if action != 0:
-            reward -= 0.04   # flat per-rebalance penalty — discourages ALL non-hold actions
+            reward -= 0.15   # flat per-rebalance penalty — discourages ALL non-hold actions
         if action != 0 and action == self.prev_action:
-            reward -= 0.15   # additional penalty for consecutive identical action (churn)
+            reward -= 0.40   # additional penalty for consecutive identical action (churn)
         reward = float(np.clip(reward, -3.0, 3.0))
         self.prev_action = action
         self.total_reward += reward
@@ -918,6 +919,8 @@ def run_ai(price_feed, num_steps, agent, static_values, seed=1):
             min(cooldown / 50.0, 1.0), range_log_ratio, step_frac)
 
         action = agent.act(state)
+        if cooldown < MIN_COOLDOWN and action != 0:
+            action = 0  # enforce minimum cooldown between rebalances
         actions_list.append(action)
 
         cost = 0.0
