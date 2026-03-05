@@ -78,13 +78,16 @@ def _load_real_data(path="binance_eth_usdc_hourly.npz"):
     try:
         npz = np.load(path)
         prices  = npz["close"].astype(np.float64)
+        opens   = npz["open"].astype(np.float64)
+        highs   = npz["high"].astype(np.float64)
+        lows    = npz["low"].astype(np.float64)
         volumes = npz["volume"].astype(np.float64)
         valid   = (prices > 0) & np.isfinite(prices)
-        return prices[valid], volumes[valid]
+        return prices[valid], volumes[valid], opens[valid], highs[valid], lows[valid]
     except FileNotFoundError:
-        return None, None
+        return None, None, None, None, None
 
-_REAL_PRICES, _REAL_VOLUMES = _load_real_data()
+_REAL_PRICES, _REAL_VOLUMES, _REAL_OPENS, _REAL_HIGHS, _REAL_LOWS = _load_real_data()
 if _REAL_PRICES is not None:
     print(f"[DATA] Loaded {len(_REAL_PRICES)} real ETH/USDC candles "
           f"(${_REAL_PRICES.min():.0f}–${_REAL_PRICES.max():.0f})")
@@ -440,14 +443,16 @@ class RLAgentBase:
 
     def build_state(self, amm_hist, mkt_hist, sentiment, liq_ratio,
                     fees_norm, volatility, dislocation, alpha_signal,
-                    momentum_sign_val, cooldown, range_log_ratio, step_frac):
+                    momentum_sign_val, cooldown, range_log_ratio, step_frac,
+                    hl_ratio=0.0, oc_return=0.0, vol_ratio=0.0):
         amm_ret = ((amm_hist[-1] - amm_hist[-2]) / amm_hist[-2]
                    if len(amm_hist) >= 2 and amm_hist[-2] != 0 else 0.0)
         mkt_ret = ((mkt_hist[-1] - mkt_hist[-2]) / mkt_hist[-2]
                    if len(mkt_hist) >= 2 and mkt_hist[-2] != 0 else 0.0)
         raw = np.array([amm_ret, mkt_ret, sentiment, liq_ratio, fees_norm,
                         volatility, dislocation, alpha_signal,
-                        momentum_sign_val, cooldown, range_log_ratio, step_frac],
+                        momentum_sign_val, cooldown, range_log_ratio, step_frac,
+                        hl_ratio, oc_return, vol_ratio],
                        dtype=float)
         return self.normalizer.update_and_normalize(raw)
 
@@ -488,7 +493,7 @@ class DQLAgent(RLAgentBase):
     - Curriculum learning support [FIX BUG 7]
     - Reward clipped to [-2, +2] [FIX BUG 8]
     """
-    def __init__(self, state_size=12, h1=128, h2=64,
+    def __init__(self, state_size=15, h1=128, h2=64,
                  target_sync=500, memory_size=50_000,
                  n_step=5, gamma=0.99):
         self.state_size = state_size
@@ -574,7 +579,7 @@ class DQLAgent(RLAgentBase):
 # ─────────────────────────────────────────────────────────────────────────────
 class PPOAgent(RLAgentBase):
 
-    def __init__(self, state_size=12, h1=128, h2=64, lr=3e-4,
+    def __init__(self, state_size=15, h1=128, h2=64, lr=3e-4,
                  gamma=0.99, epsilon_clip=0.2, lam=0.95):
         self.state_size = state_size
         self.gamma = gamma
@@ -663,7 +668,7 @@ class PPOAgent(RLAgentBase):
 # ─────────────────────────────────────────────────────────────────────────────
 class SACAgent(RLAgentBase):
 
-    def __init__(self, state_size=12, h1=128, h2=64, lr=3e-4,
+    def __init__(self, state_size=15, h1=128, h2=64, lr=3e-4,
                  gamma=0.99, memory_size=50_000, tau=0.005):
         self.state_size = state_size
         self.gamma = gamma
@@ -783,7 +788,7 @@ def generate_price_path(num_steps, seed):
         start = int(rng.integers(0, max_start + 1))
         window = _REAL_PRICES[start : start + num_steps]
         # Normalise to start at 1.0 — matches AMM pool initial price (token_b/token_a)
-        return list(window / window[0])
+        return list(window / window[0]), start
     # Fallback: GBM simulation (used if data file not found)
     set_seeds(seed)
     env = AMMEnvironment()
@@ -793,7 +798,7 @@ def generate_price_path(num_steps, seed):
         s = sa.get_sentiment(env.price_history)
         env.simulate_market_activity(s)
         path.append(env.market_price)
-    return path
+    return path, 0
 
 def mean_ci(data, confidence=0.95):
     a  = np.array(data)
@@ -874,7 +879,7 @@ def run_heuristic(price_feed, num_steps, seed=2):
 # AI strategy runner — shared by all three RL agents
 # Curriculum: num_steps passed in from orchestrator (increases over training)
 # ─────────────────────────────────────────────────────────────────────────────
-def run_ai(price_feed, num_steps, agent, static_values, seed=1):
+def run_ai(price_feed, num_steps, agent, static_values, seed=1, start_idx=0):
     set_seeds(seed)
     env = AMMEnvironment(price_feed=list(price_feed))
     sa  = SentimentAnalyzer()
@@ -912,11 +917,22 @@ def run_ai(price_feed, num_steps, agent, static_values, seed=1):
             np.log(max(range_center, 1e-9) / max(mkt, 1e-9)), -2.0, 2.0))
         step_frac = step / max(num_steps - 1, 1)
 
+        hl_ratio = oc_return = vol_ratio = 0.0
+        if _REAL_PRICES is not None and start_idx > 0:
+            idx = start_idx + step
+            if 0 <= idx < len(_REAL_PRICES):
+                c = max(_REAL_PRICES[idx], 1e-9)
+                hl_ratio  = float((_REAL_HIGHS[idx] - _REAL_LOWS[idx]) / c)
+                oc_return = float((_REAL_PRICES[idx] - _REAL_OPENS[idx]) / max(_REAL_OPENS[idx], 1e-9))
+                v_win = _REAL_VOLUMES[max(0, idx - 24):idx + 1]
+                vol_ratio = float(_REAL_VOLUMES[idx] / max(v_win.mean(), 1e-9) - 1.0)
+
         state = agent.build_state(
             env.price_history, env.market_price_history,
             s, liq_ratio, lp.fees_earned / max(lp.initial_value, 1.0),
             vol, disloc, alpha_pct, mom,
-            min(cooldown / 50.0, 1.0), range_log_ratio, step_frac)
+            min(cooldown / 50.0, 1.0), range_log_ratio, step_frac,
+            hl_ratio, oc_return, vol_ratio)
 
         action = agent.act(state)
         if cooldown < MIN_COOLDOWN and action != 0:
@@ -969,7 +985,8 @@ def run_ai(price_feed, num_steps, agent, static_values, seed=1):
             s, liq_ratio, lp.fees_earned / max(lp.initial_value, 1.0),
             vol, disloc, alpha_pct_new, mom,
             min(cooldown / 50.0, 1.0), range_log2,
-            (step + 1) / max(num_steps - 1, 1))
+            (step + 1) / max(num_steps - 1, 1),
+            hl_ratio, oc_return, vol_ratio)
 
         done = (step == num_steps - 1)
         if not getattr(agent, 'eval_mode', False):
@@ -997,9 +1014,9 @@ def curriculum_steps(episode, total_episodes):
     Episode 100-249: T=300 (medium, consolidates policy)
     Episode 250+:   T=500  (full evaluation horizon — majority of training)
     """
-    if episode < 100:
+    if episode < 200:
         return 100
-    elif episode < 250:
+    elif episode < 500:
         return 300
     else:
         return 500
@@ -1033,9 +1050,9 @@ class AIAMMSimulation:
         for ep in range(self.num_episodes):
             T       = curriculum_steps(ep, self.num_episodes)
             ep_seed = seed + ep * 997
-            path    = generate_price_path(T, ep_seed)
+            path, start_idx = generate_price_path(T, ep_seed)
             static  = run_static(path, T, seed=ep_seed)
-            ai      = run_ai(path, T, agent, static["values"], seed=ep_seed + 1)
+            ai      = run_ai(path, T, agent, static["values"], seed=ep_seed + 1, start_idx=start_idx)
 
             alpha = ai["values"][-1] - static["values"][-1]
             alpha_ep.append(alpha)
@@ -1169,9 +1186,9 @@ class AIAMMSimulation:
             ai_v, st_v = [], []
             for ep in range(50):
                 ep_seed = self.base_seed + 999_999 + ep * 31 + T
-                path   = generate_price_path(T, ep_seed)
+                path, start_idx = generate_price_path(T, ep_seed)
                 static = run_static(path, T, seed=ep_seed)
-                ai     = run_ai(path, T, trained_agent, static["values"], seed=ep_seed + 1)
+                ai     = run_ai(path, T, trained_agent, static["values"], seed=ep_seed + 1, start_idx=start_idx)
                 ai_v.append(ai["values"][-1])
                 st_v.append(static["values"][-1])
             ai_m  = np.mean(ai_v); st_m = np.mean(st_v)
@@ -1196,7 +1213,7 @@ class AIAMMSimulation:
         print("  TABLE IV. Heuristic Baseline Comparison (last full episode, T=500)")
         print("=" * 85)
         table4_seed = self.base_seed + 299 * 997
-        path   = generate_price_path(500, table4_seed)
+        path, _ = generate_price_path(500, table4_seed)
         static = run_static(path, 500, seed=table4_seed)
         heur   = run_heuristic(path, 500, seed=table4_seed + 2)
         last_ai = arch_results['ddqn'][0]['last_ai']
@@ -1321,12 +1338,12 @@ def main():
     print(f"[V10] Reward weights (normalized, sum=1.0): "
           f"W1={W1:.4f} W2={W2:.4f} W3={W3:.4f} W4={W4:.4f}")
     print(f"[V10] Range half-width: {RANGE_HALF_WIDTH:.2f} (widened from 0.12)")
-    print(f"[V10] Curriculum: T=100 (ep 0-99) -> T=300 (ep 100-249) -> T=500 (ep 250+)")
+    print(f"[V10] Curriculum: T=100 (ep 0-199) -> T=300 (ep 200-499) -> T=500 (ep 500+)")
     print(f"[V10] Reward signal: LEVEL alpha (non-zero mean) instead of DELTA alpha")
     print()
 
     sim = AIAMMSimulation(
-        num_episodes=500,   # 500 eps with curriculum = ~250 full T=500 episodes
+        num_episodes=1000,  # 1000 eps with curriculum = ~500 full T=500 episodes
         n_seeds=5,          # IEEE: multi-seed statistical evaluation
         base_seed=42,
     )
