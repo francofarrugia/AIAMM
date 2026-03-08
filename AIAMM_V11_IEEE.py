@@ -71,6 +71,12 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from scipy import stats as scipy_stats
 
+try:
+    sys.stdout.reconfigure(encoding="utf-8")
+    sys.stderr.reconfigure(encoding="utf-8")
+except Exception:
+    pass
+
 # ─────────────────────────────────────────────────────────────────────────────
 # Real market data — Binance ETH/USDC hourly (loaded once at startup)
 # ─────────────────────────────────────────────────────────────────────────────
