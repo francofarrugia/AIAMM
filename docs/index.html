@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="AIAMM: reinforcement-learning agents for Uniswap v3 liquidity management. MCAST Research Fellowship Scheme 2025 with Web3 Media.">
+<title>AIAMM Research Project</title>
+<style>*{box-sizing:border-box}html{color-scheme:light}body{margin:0}img{max-width:100%}</style>
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a single reading column (~68ch) with full-width bands; the recurring motif is a price axis with a shaded liquidity range. */
+:root{
+  --bg:#F5F7F6; --surface:#FFFFFF; --ink:#13201E; --muted:#556360; --line:#D9E0DD;
+  --accent:#0E6B5C; --band:rgba(14,107,92,.13); --loss:#A8462F; --gain:#0E6B5C;
+  --display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --body:"Public Sans","Segoe UI",Arial,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0E1514; --surface:#151F1D; --ink:#E4ECE9; --muted:#9AABA6; --line:#2A3835;
+  --accent:#5CC4AE; --band:rgba(92,196,174,.16); --loss:#E08A72; --gain:#5CC4AE; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1514; --surface:#151F1D; --ink:#E4ECE9; --muted:#9AABA6; --line:#2A3835;
+  --accent:#5CC4AE; --band:rgba(92,196,174,.16); --loss:#E08A72; --gain:#5CC4AE; color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font:16px/1.65 var(--body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:860px;margin:0 auto}
+.col{max-width:68ch}
+header{padding-block:40px 8px}
+.eyebrow{font:500 12px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h1{font:800 clamp(34px,6vw,58px)/1.02 var(--display);letter-spacing:-.02em;margin:10px 0 14px;text-wrap:balance}
+h2{font:700 26px/1.15 var(--display);margin:0 0 12px;text-wrap:balance}
+h3{font:600 16px/1.3 var(--body);margin:0 0 6px}
+p{margin:0 0 14px}
+.lead{font-size:19px;color:var(--ink)}
+.muted{color:var(--muted)}
+section{padding-block:36px;border-top:1px solid var(--line)}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.axis{margin:24px 0 8px;overflow-x:auto}
+.axis svg{display:block;width:100%;min-width:520px;height:auto}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:22px 0 4px}
+.fact{border-top:2px solid var(--ink);padding-top:8px}
+.fact b{display:block;font:700 26px/1.1 var(--display);font-variant-numeric:tabular-nums}
+.fact span{font-size:13px;color:var(--muted)}
+.loss{color:var(--loss)} .gain{color:var(--gain)}
+.chart{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px;overflow-x:auto;margin:16px 0}
+.chart svg{display:block;width:100%;min-width:560px;height:auto}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;margin-top:10px}
+.steps div{min-width:0}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:500 12px/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.tbl{overflow-x:auto;margin:10px 0}
+code,.hash{font:13px/1.5 var(--mono);word-break:break-all}
+.pill{display:inline-block;font:500 11px/1.6 var(--mono);letter-spacing:.04em;padding:1px 8px;border-radius:999px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+.pill.ok{border-color:var(--gain);color:var(--gain)} .pill.warn{border-color:var(--loss);color:var(--loss)}
+.note{border-left:3px solid var(--loss);padding:6px 0 6px 14px;margin:16px 0;border-radius:0}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.btn{display:inline-block;padding:9px 14px;border:1px solid var(--ink);border-radius:4px;color:var(--ink);text-decoration:none;font-weight:600;font-size:14px}
+.btn.primary{background:var(--ink);color:var(--bg)}
+footer{padding-block:28px 48px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.copy{font:inherit;font-size:13px;padding:2px 8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:4px;cursor:pointer;margin-left:6px}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">MCAST Research Fellowship Scheme 2025 · with Web3 Media</div>
+  <h1>AI agents for concentrated liquidity</h1>
+  <div class="col">
+    <p class="lead">AIAMM trained reinforcement-learning agents to manage a Uniswap&nbsp;v3 liquidity position on their own. On five years of real ETH/USDC prices they did not beat leaving the position alone. They pulled ahead only when markets became very volatile, and so far that has been shown in simulation.</p>
+  </div>
+  <div class="axis" aria-hidden="true">
+    <svg viewBox="0 0 860 92">
+      <line x1="20" x2="840" y1="58" y2="58" stroke="var(--line)" stroke-width="1.5"/>
+      <rect x="182" y="22" width="496" height="36" fill="var(--band)"/>
+      <line x1="182" x2="182" y1="18" y2="64" stroke="var(--accent)" stroke-width="1.5"/>
+      <line x1="678" x2="678" y1="18" y2="64" stroke="var(--accent)" stroke-width="1.5"/>
+      <line x1="430" x2="430" y1="14" y2="64" stroke="var(--ink)" stroke-width="2"/>
+      <g font-family="JetBrains Mono, monospace" font-size="12" fill="var(--muted)">
+        <text x="182" y="82" text-anchor="middle">$1,235</text>
+        <text x="430" y="82" text-anchor="middle" fill="var(--ink)">P₀ $2,058.66</text>
+        <text x="678" y="82" text-anchor="middle">$2,882</text>
+        <text x="196" y="44" fill="var(--accent)">agent's ±40% range</text>
+        <text x="24" y="50">ETH / USDC</text>
+      </g>
+    </svg>
+  </div>
+  <div class="facts">
+    <div class="fact"><b class="loss">−$6.29</b><span>Best agent (DDQN) vs passive, per 500-hour episode on $2,000, real data</span></div>
+    <div class="fact"><b>12.4%</b><span>Share of real-data episodes the best agent won</span></div>
+    <div class="fact"><b class="gain">+$240.87</b><span>DDQN vs passive at σ = 0.050, simulated prices</span></div>
+    <div class="fact"><b>67</b><span>Verifiable transactions in the Sepolia testnet run</span></div>
+  </div>
+</header>
+
+<section id="findings">
+  <h2>When does active management pay?</h2>
+  <div class="col"><p>Each agent is scored by alpha: its final portfolio value minus that of a passive full-range position on the same price path, after fees and gas. Below zero, doing nothing was better.</p></div>
+  <div class="chart">
+    <svg viewBox="0 0 760 330" role="img" aria-label="DDQN mean alpha by market volatility">
+      <g font-family="Public Sans, Arial, sans-serif" font-size="12">
+        <line x1="70" x2="740" y1="247" y2="247" stroke="var(--muted)" stroke-width="1"/>
+        <line x1="70" x2="740" y1="176" y2="176" stroke="var(--line)"/><line x1="70" x2="740" y1="105" y2="105" stroke="var(--line)"/><line x1="70" x2="740" y1="34" y2="34" stroke="var(--line)"/>
+        <text x="62" y="251" text-anchor="end" fill="var(--muted)">$0</text><text x="62" y="180" text-anchor="end" fill="var(--muted)">$100</text><text x="62" y="109" text-anchor="end" fill="var(--muted)">$200</text><text x="62" y="38" text-anchor="end" fill="var(--muted)">$300</text>
+        <line x1="182" x2="182" y1="20" y2="262" stroke="var(--muted)" stroke-dasharray="3 4"/>
+        <text x="176" y="20" text-anchor="end" fill="var(--muted)">real data</text><text x="188" y="20" fill="var(--muted)">simulated prices</text>
+        <g fill="var(--muted)" stroke="var(--muted)">
+          <circle cx="126" cy="251.5" r="5"/><circle cx="238" cy="253.9" r="5"/><circle cx="350" cy="252.1" r="5"/>
+          <line x1="462" x2="462" y1="248.8" y2="245.4" stroke-width="2"/><circle cx="462" cy="246.9" r="5"/>
+        </g>
+        <g fill="var(--accent)" stroke="var(--accent)" stroke-width="2">
+          <line x1="574" x2="574" y1="219.0" y2="198.8"/><line x1="567" x2="581" y1="219.0" y2="219.0"/><line x1="567" x2="581" y1="198.8" y2="198.8"/><circle cx="574" cy="208.9" r="5"/>
+          <line x1="686" x2="686" y1="133.8" y2="18.1"/><line x1="679" x2="693" y1="133.8" y2="133.8"/><line x1="679" x2="693" y1="18.1" y2="18.1"/><circle cx="686" cy="76.0" r="5"/>
+        </g>
+        <g fill="var(--ink)">
+          <text x="126" y="236" text-anchor="middle">−$6.29</text><text x="238" y="236" text-anchor="middle">−$9.65</text><text x="350" y="236" text-anchor="middle">−$7.22</text><text x="462" y="232" text-anchor="middle">+$0.15</text>
+          <text x="590" y="212" font-weight="600">+$53.62</text><text x="702" y="80" font-weight="600">+$240.87</text>
+        </g>
+        <g fill="var(--ink)" text-anchor="middle"><text x="126" y="284">ETH/USDC</text><text x="238" y="284">σ 0.005</text><text x="350" y="284">σ 0.010</text><text x="462" y="284">σ 0.015</text><text x="574" y="284">σ 0.030</text><text x="686" y="284">σ 0.050</text></g>
+        <g fill="var(--muted)" text-anchor="middle"><text x="126" y="302">2021–2026</text><text x="238" y="302">wins 1%</text><text x="350" y="302">wins 10.4%</text><text x="462" y="302">wins 29.2%</text><text x="574" y="302">wins 58.6%</text><text x="686" y="302">wins 67%</text></g>
+        <text x="70" y="324" fill="var(--muted)">Mean alpha per episode, DDQN; whiskers = 95% CI. Real data 5 seeds × 1,000 episodes; simulation 5 seeds × 100 per σ.</text>
+      </g>
+    </svg>
+  </div>
+  <div class="col">
+    <p>PPO (−$7.09) and SAC (−$7.11) trailed DDQN on real data; all three shortfalls are statistically significant after Bonferroni correction. Real ETH/USDC prices trend, and a trend rewards a position that never leaves its range. Each rebalance costs gas and forgoes fees, and in calm or trending markets the agents did not earn that back.</p>
+  </div>
+</section>
+
+<section id="method">
+  <h2>How the agents work</h2>
+  <div class="steps">
+    <div><h3>What they see</h3><p class="muted">15 hourly inputs: price and pool returns, volatility, where the price sits in the range, how much capital is active, fees earned, momentum and a price-based sentiment indicator.</p></div>
+    <div><h3>What they can do</h3><p class="muted">Five actions: hold; add or remove 10% of capital; move the ±40% range up or down by 3%. Each move pays $0.15–$0.30 in modelled gas.</p></div>
+    <div><h3>How they learn</h3><p class="muted">Double DQN, PPO and SAC, trained over 1,000 episodes with a curriculum of 100, 300 and 500 hours, rewarded for beating the passive position.</p></div>
+  </div>
+</section>
+
+<section id="testnet">
+  <h2>Running on a public blockchain</h2>
+  <div class="col">
+    <p>On 28 October 2026 the trained DDQN agent ran a 48-hour episode on the Ethereum Sepolia testnet with no human in the loop, using the official Uniswap&nbsp;v3 contracts and two test tokens with no monetary value. Each hour the pool was moved to the next real ETH/USDC price from 26–28 February 2026; the agent read the chain and acted. It held 44 times and removed liquidity 4 times.</p>
+    <p>It finished at <b>$1,932.43</b> against <b>$1,934.07</b> for the passive position: alpha <b>−$1.64</b>, effectively a tie in a calm window, as the simulation predicts. One episode on test tokens shows the system works; it is not a performance test.</p>
+  </div>
+  <div class="note col"><p><b>A lesson for anyone deploying agents.</b> Twice a withdrawal succeeded on-chain but the public RPC failed before its receipt could be read. The script retried, collected nothing, and its own bookkeeping showed a $331 loss. Reconciling every step against the chain's own state corrected it to −$1.64. The published kit now never re-sends a broadcast transaction and includes the reconciliation script.</p></div>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Contract</th><th>Address on Sepolia</th></tr></thead>
+      <tbody>
+        <tr><td>tETH/tUSDC pool, 0.30%</td><td><a class="hash" href="https://sepolia.etherscan.io/address/0x407333868c4B779c12D9F159A109B8535Fb21692">0x407333868c4B779c12D9F159A109B8535Fb21692</a></td></tr>
+        <tr><td>Operator wallet</td><td><a class="hash" href="https://sepolia.etherscan.io/address/0xDC3FCf4f645355f6e36cF0f10D26B0ccF5b5ab31">0xDC3FCf4f645355f6e36cF0f10D26B0ccF5b5ab31</a></td></tr>
+        <tr><td>Uniswap v3 position manager (official)</td><td><a class="hash" href="https://sepolia.etherscan.io/address/0x1238536071E1c677A632429e3655c799b22cDA52">0x1238536071E1c677A632429e3655c799b22cDA52</a></td></tr>
+        <tr><td>Test token tETH</td><td><a class="hash" href="https://sepolia.etherscan.io/address/0xa1f8b8246Fd9b9373190f77B7D2A781C60e7416B">0xa1f8b8246Fd9b9373190f77B7D2A781C60e7416B</a></td></tr>
+        <tr><td>Test token tUSDC</td><td><a class="hash" href="https://sepolia.etherscan.io/address/0xE2836bDAf42Ce9E940ac9301B52626aEB26EFA56">0xE2836bDAf42Ce9E940ac9301B52626aEB26EFA56</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="muted">67 transactions, 58,046,144 gas (0.0058 test ETH). Every hash is listed in <code>testnet/output/testnet_transactions_reconciled.csv</code>.</p>
+</section>
+
+<section id="outputs">
+  <h2>Publications and dissemination</h2>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Output</th><th>Where</th><th>When</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Reinforcement Learning Agents for Adaptive Liquidity Provisioning in Concentrated Decentralised Exchanges: A Comparative Architecture Study (Farrugia &amp; Deguara)</td><td>MCAST Journal of Applied Research and Practice</td><td>Accepted 27 Oct 2026</td><td><span class="pill ok">accepted</span> December 2026 issue</td></tr>
+        <tr><td>When AI meets DeFi: making crypto financial markets smarter and safer</td><td>The Sunday Times of Malta, p. 44; <a href="https://thebusinesspicture.com/2026/05/25/when-ai-meets-defi-making-crypto-financial-markets-smarter-and-safer/">online</a></td><td>24 May 2026</td><td><span class="pill ok">published</span></td></tr>
+        <tr><td>Deep RL for Automated Liquidity Management in Concentrated AMMs: A Multi-Architecture Empirical Study</td><td>DSC Next 2026, Amsterdam</td><td>7–8 May 2026</td><td><span class="pill ok">presented</span></td></tr>
+        <tr><td>Public event: AI in Trading Algorithms</td><td>Two Buoys, Malta</td><td>26 May 2026</td><td><span class="pill ok">held</span></td></tr>
+        <tr><td>Journal paper JACME-26-11</td><td>J. of Advances in Civil and Mechanical Engineering</td><td>5 Jun 2026</td><td><span class="pill warn">published, superseded</span> pre-correction results; correction requested</td></tr>
+        <tr><td>AIAMM: An Intelligent AMM Framework for Autonomous Liquidity Management in DeFi</td><td>IEEE ICIR 2026, Pisa</td><td>Accepted 5 Apr 2026</td><td><span class="pill">accepted, not presented</span></td></tr>
+        <tr><td>On-chain demonstration on Ethereum Sepolia</td><td>Public testnet, with Web3 Media</td><td>28 Oct 2026</td><td><span class="pill ok">completed</span></td></tr>
+        <tr><td>Open-source code, data and testnet kit</td><td><a href="https://github.com/francofarrugia/AIAMM">github.com/francofarrugia/AIAMM</a></td><td>29 Oct 2026</td><td><span class="pill ok">public, MIT licence</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="limits">
+  <h2>What this study does not show</h2>
+  <div class="col">
+    <p>The agents' sentiment input is calculated from price momentum; no news or social-media text was analysed, and removing the input changed nothing (p = 0.88). Prices come from the Binance exchange, so pool volume and fees are simulated. Slippage was not measured. The positive high-volatility result has not been tested with real money on a live market. Those are the next steps for this line of research.</p>
+  </div>
+</section>
+
+<section id="code">
+  <h2>Reproduce it</h2>
+  <div class="col"><p>The repository holds the final V13 simulation, the hourly ETH/USDC dataset, the October 2026 supplementary analysis and the Sepolia kit. Anyone with free Sepolia test ETH can repeat the on-chain run in about an hour.</p></div>
+  <div class="links">
+    <a class="btn primary" href="https://github.com/francofarrugia/AIAMM">Open the GitHub repository</a>
+    <a class="btn" href="AIAMM_Whitepaper_Implementation_Guide.pdf">Whitepaper and implementation guide (PDF)</a>
+    <a class="btn" href="https://sepolia.etherscan.io/address/0x407333868c4B779c12D9F159A109B8535Fb21692">See the pool on Etherscan</a>
+  </div>
+</section>
+
+<footer>
+  <p><b style="color:var(--ink)">Team.</b> Franco Farrugia, principal investigator, MCAST. Cedric Deguara, co-author, Web3 Media (industry partner: testnet support and dissemination).</p>
+  <p><b style="color:var(--ink)">Funding.</b> MCAST Research Fellowship Scheme 2025. Project period 11 July 2025 – 10 July 2026, extended to 10 January 2027.</p>
+  <p><b style="color:var(--ink)">Contact.</b> <span id="mail">franco.farrugia@mcast.edu.mt</span><button class="copy" id="copybtn" type="button">Copy</button></p>
+</footer>
+</div>
+<script>
+document.getElementById('copybtn').addEventListener('click',function(){
+  var t=document.getElementById('mail').textContent,b=this;
+  function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('mail'));var s=getSelection();s.removeAllRanges();s.addRange(r);}
+  try{navigator.clipboard.writeText(t).then(function(){b.textContent='Copied'},sel);}catch(e){sel();}
+});
+</script>
+
+</body>
+</html>
