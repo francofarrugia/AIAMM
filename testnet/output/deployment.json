@@ -1,0 +1,133 @@
+{
+  "network": "sepolia",
+  "chain_id": 11155111,
+  "explorer": "https://sepolia.etherscan.io",
+  "rpc": "https://ethereum-sepolia-rpc.publicnode.com",
+  "wallet": "0xDC3FCf4f645355f6e36cF0f10D26B0ccF5b5ab31",
+  "uniswap": {
+    "factory": "0x0227628f3F023bb0B980b67D528571c95c6DaC1c",
+    "npm": "0x1238536071E1c677A632429e3655c799b22cDA52",
+    "router": "0x3bFA4769FB09eefC5a80d6E87c3B9C650f7Ae48E"
+  },
+  "fee_tier": 3000,
+  "start_idx": 38295,
+  "P0": 2058.66,
+  "txs": [
+    {
+      "label": "deploy tETH",
+      "tx": "0xc05d19e1174e4c2963113488bb7c0b6597433a9ccf5dda110b476d2fddf6edf7",
+      "block": 12012016,
+      "time_utc": "2026-10-28 11:28:24",
+      "gas_used": 3908231,
+      "eth_fee": 0.000390823158623465,
+      "url": "https://sepolia.etherscan.io/tx/0xc05d19e1174e4c2963113488bb7c0b6597433a9ccf5dda110b476d2fddf6edf7",
+      "address": "0xa1f8b8246Fd9b9373190f77B7D2A781C60e7416B"
+    },
+    {
+      "label": "deploy tUSDC",
+      "tx": "0x0d1e58dec96dd741c9c1a58aa9b4c2ae3c233469dca3da6d8f47bc43261e0a36",
+      "block": 12012017,
+      "time_utc": "2026-10-28 11:28:36",
+      "gas_used": 3908267,
+      "eth_fee": 0.000390826758624005,
+      "url": "https://sepolia.etherscan.io/tx/0x0d1e58dec96dd741c9c1a58aa9b4c2ae3c233469dca3da6d8f47bc43261e0a36",
+      "address": "0xE2836bDAf42Ce9E940ac9301B52626aEB26EFA56"
+    },
+    {
+      "label": "create + initialise pool",
+      "tx": "0x14dd91b07affc19d3566232633dc6fe5361a7046b14f4a6f2334960aa4176d0e",
+      "block": 12012018,
+      "time_utc": "2026-10-28 11:28:48",
+      "gas_used": 34577183,
+      "eth_fee": 0.003457718818657745,
+      "url": "https://sepolia.etherscan.io/tx/0x14dd91b07affc19d3566232633dc6fe5361a7046b14f4a6f2334960aa4176d0e"
+    },
+    {
+      "label": "approve PositionManager",
+      "tx": "0x7ec66173b3c855dec78a70447c7feb2efa972bbd6d2073119d430d3710ab6d0f",
+      "block": 12012019,
+      "time_utc": "2026-10-28 11:29:00",
+      "gas_used": 128488,
+      "eth_fee": 1.284880192732e-05,
+      "url": "https://sepolia.etherscan.io/tx/0x7ec66173b3c855dec78a70447c7feb2efa972bbd6d2073119d430d3710ab6d0f"
+    },
+    {
+      "label": "approve SwapRouter02",
+      "tx": "0x1cfa589e71b816b729d1408bd187cb12e48ec3d0673e0576612b732de9a25085",
+      "block": 12012020,
+      "time_utc": "2026-10-28 11:29:12",
+      "gas_used": 128488,
+      "eth_fee": 1.284880192732e-05,
+      "url": "https://sepolia.etherscan.io/tx/0x1cfa589e71b816b729d1408bd187cb12e48ec3d0673e0576612b732de9a25085"
+    },
+    {
+      "label": "approve PositionManager",
+      "tx": "0x0dd33f85845d4120743a7192a8cd2287ea72e7f2eaa193a98ed9fd488d15bf9d",
+      "block": 12012021,
+      "time_utc": "2026-10-28 11:29:24",
+      "gas_used": 128488,
+      "eth_fee": 1.284880192732e-05,
+      "url": "https://sepolia.etherscan.io/tx/0x0dd33f85845d4120743a7192a8cd2287ea72e7f2eaa193a98ed9fd488d15bf9d"
+    },
+    {
+      "label": "approve SwapRouter02",
+      "tx": "0xbd198d9d24326bc15156945b080555f226d5020358065d6d25724454a6670d6b",
+      "block": 12012022,
+      "time_utc": "2026-10-28 11:29:36",
+      "gas_used": 128488,
+      "eth_fee": 1.284880192732e-05,
+      "url": "https://sepolia.etherscan.io/tx/0xbd198d9d24326bc15156945b080555f226d5020358065d6d25724454a6670d6b"
+    },
+    {
+      "label": "mint background liquidity (full range)",
+      "tx": "0x1fee6bfd0707bc3b2edf58bff5d478fd38d590a6412a5e383a9edbd9b6f96272",
+      "block": 12012023,
+      "time_utc": "2026-10-28 11:29:48",
+      "gas_used": 2382330,
+      "eth_fee": 0.00023823303573495,
+      "url": "https://sepolia.etherscan.io/tx/0x1fee6bfd0707bc3b2edf58bff5d478fd38d590a6412a5e383a9edbd9b6f96272"
+    },
+    {
+      "label": "mint PASSIVE benchmark position",
+      "tx": "0x04df21f03c9098428db09e28a9341d4015152827ba9cce977112b21f4b9e7cee",
+      "block": 12012024,
+      "time_utc": "2026-10-28 11:30:00",
+      "gas_used": 925952,
+      "eth_fee": 9.259521388928e-05,
+      "url": "https://sepolia.etherscan.io/tx/0x04df21f03c9098428db09e28a9341d4015152827ba9cce977112b21f4b9e7cee"
+    },
+    {
+      "label": "mint AI AGENT position (\u00b140%)",
+      "tx": "0xf341256803a1e6078470018c87fe55710b551347a985c8a7dbe28d6ee151889b",
+      "block": 12012025,
+      "time_utc": "2026-10-28 11:30:12",
+      "gas_used": 1660897,
+      "eth_fee": 0.000166089724913455,
+      "url": "https://sepolia.etherscan.io/tx/0xf341256803a1e6078470018c87fe55710b551347a985c8a7dbe28d6ee151889b"
+    }
+  ],
+  "tETH": "0xa1f8b8246Fd9b9373190f77B7D2A781C60e7416B",
+  "tUSDC": "0xE2836bDAf42Ce9E940ac9301B52626aEB26EFA56",
+  "token0": "0xa1f8b8246Fd9b9373190f77B7D2A781C60e7416B",
+  "token1": "0xE2836bDAf42Ce9E940ac9301B52626aEB26EFA56",
+  "pool": "0x407333868c4B779c12D9F159A109B8535Fb21692",
+  "background_token_id": 233911,
+  "passive_token_id": 233912,
+  "agent_token_id": 233913,
+  "passive_idle": [
+    0.0,
+    0.0
+  ],
+  "agent_idle": [
+    0.23342489166682667,
+    250.0
+  ],
+  "agent_range_usd": [
+    1235.196,
+    2882.124
+  ],
+  "agent_center": 2058.66,
+  "initial_value_usd": 2000.0,
+  "gas_used_deploy": 47876812,
+  "eth_spent_deploy": 0.00478768191815218
+}

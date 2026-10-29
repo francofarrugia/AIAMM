@@ -1,0 +1,132 @@
+2026-10-28 12:28:21  Network sepolia via https://ethereum-sepolia-rpc.publicnode.com; wallet 0xDC3FCf4f645355f6e36cF0f10D26B0ccF5b5ab31; balance 0.0500 ETH
+2026-10-28 12:28:22  Current gas price 0.00 gwei -> estimated cost for deployment + 48 steps: 0.0000 test ETH
+2026-10-28 12:28:22  Replay window starts at dataset index 38295 (2026-02-26 01:00 UTC), price $2,058.66
+2026-10-28 12:28:25    tx deploy tETH: 0xc05d19e1174e4c2963113488bb7c0b6597433a9ccf5dda110b476d2fddf6edf7  gas 3908231
+2026-10-28 12:28:37    tx deploy tUSDC: 0x0d1e58dec96dd741c9c1a58aa9b4c2ae3c233469dca3da6d8f47bc43261e0a36  gas 3908267
+2026-10-28 12:28:49    tx create + initialise pool: 0x14dd91b07affc19d3566232633dc6fe5361a7046b14f4a6f2334960aa4176d0e  gas 34577183
+2026-10-28 12:28:50  Pool 0x407333868c4B779c12D9F159A109B8535Fb21692
+2026-10-28 12:29:02    tx approve PositionManager: 0x7ec66173b3c855dec78a70447c7feb2efa972bbd6d2073119d430d3710ab6d0f  gas 128488
+2026-10-28 12:29:14    tx approve SwapRouter02: 0x1cfa589e71b816b729d1408bd187cb12e48ec3d0673e0576612b732de9a25085  gas 128488
+2026-10-28 12:29:27    tx approve PositionManager: 0x0dd33f85845d4120743a7192a8cd2287ea72e7f2eaa193a98ed9fd488d15bf9d  gas 128488
+2026-10-28 12:29:37    tx approve SwapRouter02: 0xbd198d9d24326bc15156945b080555f226d5020358065d6d25724454a6670d6b  gas 128488
+2026-10-28 12:29:49    tx mint background liquidity (full range): 0x1fee6bfd0707bc3b2edf58bff5d478fd38d590a6412a5e383a9edbd9b6f96272  gas 2382330
+2026-10-28 12:30:01    tx mint PASSIVE benchmark position: 0x04df21f03c9098428db09e28a9341d4015152827ba9cce977112b21f4b9e7cee  gas 925952
+2026-10-28 12:30:13    tx mint AI AGENT position (±40%): 0xf341256803a1e6078470018c87fe55710b551347a985c8a7dbe28d6ee151889b  gas 1660897
+2026-10-28 12:30:13  Deployment complete: 10 transactions, 0.00479 test ETH used. Balance left 0.0452 ETH. Next: python 02_run_agent.py
+2026-10-28 12:37:32  Agent run on sepolia: steps 0 -> 48; wallet balance 0.0452 ETH
+2026-10-28 12:37:38    tx market move to $2,053.32: 0xf67ab97a9dc63445568b735a830c0ae7ef7b277b8a215c36714e382911fa8767  gas 250435
+2026-10-28 12:37:42  step   1/48  price $2,053.32  action Hold                 agent $1,997.41  passive $1,997.41  alpha +0.01
+2026-10-28 12:37:49    tx market move to $2,054.65: 0x7c8b302e0133983ba2d4bd6c37b403cabc16b6e49895830332c3e91fb7393fe3  gas 250176
+2026-10-28 12:37:53  step   2/48  price $2,054.65  action Hold                 agent $1,997.42  passive $1,997.41  alpha +0.01
+2026-10-28 12:38:01    tx market move to $2,075.17: 0xd2dedfb77a1f690ae026db7180cc787e75594f7731a4552ea0711c2d825a2bde  gas 152258
+2026-10-28 12:38:05  step   3/48  price $2,075.17  action Hold                 agent $2,008.03  passive $2,008.02  alpha +0.01
+2026-10-28 12:38:14    tx market move to $2,066.48: 0x3940c29077926c9899f45e87f06f64583fb8107b5fe169dfdd104ca794201883  gas 152487
+2026-10-28 12:38:18  step   4/48  price $2,066.48  action Hold                 agent $2,003.87  passive $2,003.82  alpha +0.05
+2026-10-28 12:38:25    tx market move to $2,062.80: 0x90c6d1798c1a559f915186396ee3e466cce01311ef2f6fd8e8552b8b36da876d  gas 152463
+2026-10-28 12:38:29  step   5/48  price $2,062.80  action Hold                 agent $2,002.10  passive $2,002.04  alpha +0.07
+2026-10-28 12:38:37    tx market move to $2,053.49: 0x89c5a8d72b6b2751f36a8233a33b13bae9949c9de71007656929bd42578fdfea  gas 152499
+2026-10-28 12:38:42  step   6/48  price $2,053.49  action Hold                 agent $1,997.60  passive $1,997.52  alpha +0.08
+2026-10-28 12:38:49    tx market move to $2,054.79: 0x36b470f1548983faea3005989041a427221e7d3ee2ca99477e5001b32a78cfd3  gas 152246
+2026-10-28 12:38:54  step   7/48  price $2,054.79  action Hold                 agent $1,998.24  passive $1,998.16  alpha +0.08
+2026-10-28 12:39:02    tx market move to $2,075.16: 0xf35c50c1b2da88392cf5c14eb4f8baaadd4074cfbc29edc0bcb958824c26acb5  gas 152258
+2026-10-28 12:39:06  step   8/48  price $2,075.16  action Hold                 agent $2,008.13  passive $2,008.05  alpha +0.08
+2026-10-28 12:39:14    tx market move to $2,065.54: 0xa1129845a0731ffab9afe6cdfe5c4c1aa5d20b6ecc903d2f7072e3ba2c30f985  gas 152475
+2026-10-28 12:39:18  step   9/48  price $2,065.54  action Hold                 agent $2,003.53  passive $2,003.40  alpha +0.13
+2026-10-28 12:39:25    tx market move to $2,057.71: 0x20bacce8cd2759df791cb9a932da5c74b48bf07f9a877f4ce0bc8d61e8416cb2  gas 152433
+2026-10-28 12:39:29  step  10/48  price $2,057.71  action Hold                 agent $1,999.75  passive $1,999.60  alpha +0.15
+2026-10-28 12:39:38    tx market move to $2,070.18: 0xbc7318a8eb08f6448675ce00760cbfc5b9431c7787917b83035ca19ddf886bb6  gas 152230
+2026-10-28 12:39:50    tx AGENT: decrease liquidity: 0x26dc783c6175839da2dc81846a19466d56c0894cac47d56ce853811563e641e7  gas 805171
+2026-10-28 12:40:02    tx AGENT: collect: 0x7ddd3b9ad97bac02f0ee43e3c1c80c58ded6b72914e4d15a4e3709a0eb1428d5  gas 149647
+2026-10-28 12:40:03  step  11/48  price $2,070.18  action Decrease liquidity   agent $2,169.14  passive $1,999.61  alpha +169.53
+2026-10-28 12:40:13    tx market move to $2,065.30: 0x809fe5ac1f99eaf3e81325d9601ea877df7aed61b9fe21fdfb4e499f2d306e66  gas 152491
+2026-10-28 12:40:18  step  12/48  price $2,065.30  action Hold                 agent $2,003.32  passive $2,003.30  alpha +0.02
+2026-10-28 12:40:25    tx market move to $2,051.21: 0x43cccd8dbdcddbc2924ceb7ce4868cd842af852fa1a396a7ba4a7dd47ba323a2  gas 152515
+2026-10-28 12:40:29  step  13/48  price $2,051.21  action Hold                 agent $1,996.51  passive $1,996.46  alpha +0.05
+2026-10-28 12:40:37    tx market move to $2,033.46: 0x46bd5ff33c950c505cea3a09afa60797a8f30b3e5a5716c8dea4e623c9826de0  gas 151491
+2026-10-28 12:40:41  step  14/48  price $2,033.46  action Hold                 agent $1,987.84  passive $1,987.82  alpha +0.02
+2026-10-28 12:40:49    tx market move to $1,983.94: 0xe8b76178796b64a992b9cc5f2c8c1401b6202ab28e6f17319cf80907ca14f604  gas 152477
+2026-10-28 12:40:53  step  15/48  price $1,983.94  action Hold                 agent $1,988.38  passive $1,987.97  alpha +0.41
+2026-10-28 12:40:54    retry 1/3 for market move to $1,988.63: ('execution reverted: SPL', '0x08c379a00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000353504c0000000000000000000000000000000000000000000000000000000000')
+2026-10-28 12:41:14    tx market move to $1,988.63: 0xcbed1112c159d03f26eb08f1f0a671ba3c8c1014601d02555b6deb5c212c1fed  gas 152230
+2026-10-28 12:41:18  step  16/48  price $1,988.63  action Hold                 agent $1,965.46  passive $1,965.83  alpha -0.37
+2026-10-28 12:41:25    tx market move to $2,004.18: 0x9361493cc2028c1e9c41fcdac2eb49d10dbe81c2e65e0d6b2cf73b9d1ce246b2  gas 152202
+2026-10-28 12:41:29  step  17/48  price $2,004.18  action Hold                 agent $1,973.38  passive $1,973.51  alpha -0.13
+2026-10-28 12:41:37    tx market move to $2,030.25: 0x723bb3345a90559e6e27491d346c90304cfd23e4abcd897437f4284d054fa2ef  gas 152200
+2026-10-28 12:41:41  step  18/48  price $2,030.25  action Hold                 agent $1,986.46  passive $1,986.32  alpha +0.14
+2026-10-28 12:41:49    tx market move to $2,024.01: 0xa098702e562886ab5fb3b9fb2708a2f09728e89a97659ed248503bc3cb41ff99  gas 152477
+2026-10-28 12:41:53  step  19/48  price $2,024.01  action Hold                 agent $1,983.38  passive $1,983.27  alpha +0.10
+2026-10-28 12:42:01    tx market move to $2,030.49: 0x181cd5db560bcebee1a1c98df20036212c12e360eda0fb42d07df781f41247af  gas 152206
+2026-10-28 12:42:05  step  20/48  price $2,030.49  action Hold                 agent $1,986.60  passive $1,986.45  alpha +0.16
+2026-10-28 12:42:13    tx market move to $2,033.26: 0x32b8f3ec18adf280dfb34280d0aa0cedc959eec2100670ae3d7e85a2f23e94f2  gas 152230
+2026-10-28 12:42:17  step  21/48  price $2,033.26  action Hold                 agent $1,987.98  passive $1,987.81  alpha +0.17
+2026-10-28 12:42:25    tx market move to $2,027.76: 0x17ef5f8902aabc1dde63f338696d327b441f33308bbb300d2f882c92ecb4c8d8  gas 152499
+2026-10-28 12:42:38    tx AGENT: decrease liquidity: 0xb534b179e01cbbf267649cea0ea23a4fa4af35c41478c42e69995af964050c46  gas 413503
+2026-10-28 12:42:49    retry 1/3 for AGENT: collect: Block with id: '0xb74a38' not found.
+2026-10-28 12:43:13    tx AGENT: collect: 0x5fe44e721922f9fbc877e8995e8fb775a6a7e4b654c02310ca95334785aa69f9  gas 84407
+2026-10-28 12:43:15  step  22/48  price $2,027.76  action Decrease liquidity   agent $1,816.59  passive $1,985.12  alpha -168.52
+2026-10-28 12:43:25    tx market move to $2,014.87: 0x81fd6b0211cac5151f6f011665079812e0c48bf65d6c644a946d7b009dd35407  gas 152485
+2026-10-28 12:43:28  step  23/48  price $2,014.87  action Hold                 agent $1,810.66  passive $1,978.81  alpha -168.15
+2026-10-28 12:43:37    tx market move to $2,021.74: 0x3e30b209e29f84fc2f331d48007315446bc377e4b9525f8bb57c76009211636c  gas 152214
+2026-10-28 12:43:41  step  24/48  price $2,021.74  action Hold                 agent $1,810.68  passive $1,978.82  alpha -168.14
+2026-10-28 12:43:50    tx market move to $2,026.14: 0x5fb75ce70fed9e8fc7f97b5760f7ad5251c1c083718f42aca5e48aa5bebc2051  gas 152242
+2026-10-28 12:43:53  step  25/48  price $2,026.14  action Hold                 agent $1,815.89  passive $1,984.34  alpha -168.45
+2026-10-28 12:44:02    tx market move to $2,045.43: 0x5075790e334d49ecd3dfa4f96865992966c42c26c1909c6866fc4ce11c4ed48f  gas 152258
+2026-10-28 12:44:05  step  26/48  price $2,045.43  action Hold                 agent $1,824.77  passive $1,993.78  alpha -169.02
+2026-10-28 12:44:13    tx market move to $2,042.81: 0x025e48f7369421d7c74b351946b195181b0a31a62d8a348b7462bb5d53586b30  gas 152457
+2026-10-28 12:44:17  step  27/48  price $2,042.81  action Hold                 agent $1,823.58  passive $1,992.50  alpha -168.93
+2026-10-28 12:44:26    tx market move to $2,041.90: 0xbc36ec46e164f74396a41af327bd848f63c25fa5e757f421c06d7143b800a4c8  gas 152505
+2026-10-28 12:44:30  step  28/48  price $2,041.90  action Hold                 agent $1,823.58  passive $1,992.51  alpha -168.93
+2026-10-28 12:44:39    tx market move to $2,036.24: 0x916be8bc9b6368c01ebc03fbb68712bc4fdc2c7b49bc6b909ff0c9f64e3b2f1c  gas 152463
+2026-10-28 12:44:42  step  29/48  price $2,036.24  action Hold                 agent $1,820.59  passive $1,989.30  alpha -168.72
+2026-10-28 12:44:49    tx market move to $2,032.72: 0x36d53b8368eeee09c5951b25b20ff353a0bab7877bff3070f540be6f486d9a2e  gas 152475
+2026-10-28 12:44:53  step  30/48  price $2,032.72  action Hold                 agent $1,818.98  passive $1,987.59  alpha -168.61
+2026-10-28 12:45:01    tx market move to $2,033.93: 0xd1f6e34717258256f6cb7db8593fe399e50232a86aa958a7b8f8b1af23e6b8dc  gas 152204
+2026-10-28 12:45:05  step  31/48  price $2,033.93  action Hold                 agent $1,818.98  passive $1,987.59  alpha -168.61
+2026-10-28 12:45:13    tx market move to $2,010.26: 0x98b206f1a2fe74fb3854f26daaed42a35b5d406d4cf882abfb4334cd1887148c  gas 152459
+2026-10-28 12:45:17  step  32/48  price $2,010.26  action Hold                 agent $1,819.66  passive $1,988.23  alpha -168.57
+2026-10-28 12:45:25    retry 1/3 for market move to $1,980.96: Block with id: '0xb74a45' not found.
+2026-10-28 12:45:36    retry 2/3 for market move to $1,980.96: ('execution reverted: SPL', '0x08c379a00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000353504c0000000000000000000000000000000000000000000000000000000000')
+2026-10-28 12:45:46    retry 3/3 for market move to $1,980.96: ('execution reverted: SPL', '0x08c379a00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000353504c0000000000000000000000000000000000000000000000000000000000')
+2026-10-28 13:06:54  Agent run on sepolia: steps 32 -> 48; wallet balance 0.0445 ETH
+2026-10-28 13:07:02    tx AGENT: decrease liquidity: 0x221660b2ce1a618fbf86e4888137fbfaf85142a2d7f44c540e508e6d62c35c16  gas 413503
+2026-10-28 13:07:13    retry 1/3 for AGENT: collect: Block with id: '0xb74ab2' not found.
+2026-10-28 13:07:37    tx AGENT: collect: 0xe41d2b7c79c20d8a77f62e693d7b8ffb0aa3265d8054eeaa1afd0d45e91ea66b  gas 84407
+2026-10-28 13:07:39  step  33/48  price $1,980.96  action Decrease liquidity   agent $1,628.08  passive $1,962.16  alpha -334.08
+2026-10-28 13:07:49    retry 1/3 for market move to $1,962.25: Block with id: '0xb74ab5' not found.
+2026-10-28 13:08:00    retry 2/3 for market move to $1,962.25: ('execution reverted: SPL', '0x08c379a00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000353504c0000000000000000000000000000000000000000000000000000000000')
+2026-10-28 13:08:11    retry 3/3 for market move to $1,962.25: ('execution reverted: SPL', '0x08c379a00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000353504c0000000000000000000000000000000000000000000000000000000000')
+2026-10-28 14:07:39  Agent run on sepolia: steps 33 -> 48; wallet balance 0.0444 ETH
+2026-10-28 14:07:43  step  34/48  price $1,962.25  action Hold                 agent $1,619.89  passive $1,952.88  alpha -333.00
+2026-10-28 14:07:49    tx market move to $1,960.03: 0x5d5c287a705d060e552957ca9063694cc4b411060dc65bd1f3f6233ae7196cdf  gas 152443
+2026-10-28 14:07:53  step  35/48  price $1,960.03  action Hold                 agent $1,618.91  passive $1,951.78  alpha -332.87
+2026-10-28 14:08:01    tx market move to $1,963.59: 0x810a89d54e7ac095b9e3d52960f7c983e5438ec4508303f2961e4fdfb9b067b1  gas 152190
+2026-10-28 14:08:05  step  36/48  price $1,963.59  action Hold                 agent $1,620.49  passive $1,953.55  alpha -333.07
+2026-10-28 14:08:13    tx market move to $1,943.04: 0x005a3e34597d7b076bc7c09f08df04701ac0fe79f32aacee1f530532b3874790  gas 152515
+2026-10-28 14:08:18  step  37/48  price $1,943.04  action Hold                 agent $1,611.40  passive $1,943.32  alpha -331.92
+2026-10-28 14:08:26    tx market move to $1,948.71: 0x8a95ec852a357412162fe1245d3d919e8998540f54eb2c3fcb2964e9ecd5bf6a  gas 152232
+2026-10-28 14:08:30  step  38/48  price $1,948.71  action Hold                 agent $1,613.93  passive $1,946.16  alpha -332.23
+2026-10-28 14:08:37    tx market move to $1,927.30: 0xdba5e57c39c7438172802c724767cd1e8759e8a6e193077bb9bba8bf7a3e4bef  gas 152513
+2026-10-28 14:08:41  step  39/48  price $1,927.30  action Hold                 agent $1,604.38  passive $1,935.45  alpha -331.08
+2026-10-28 14:08:49    tx market move to $1,932.33: 0x024d5d8ce5a42e9b78994c6ac11ec83259445c4e3ff613ae4cb93f734fabedb4  gas 152234
+2026-10-28 14:08:53  step  40/48  price $1,932.33  action Hold                 agent $1,606.65  passive $1,937.98  alpha -331.33
+2026-10-28 14:09:02    retry 1/3 for market move to $1,917.92: Block with id: '0xb74be6' not found.
+2026-10-28 14:09:13    retry 2/3 for market move to $1,917.92: ('execution reverted: SPL', '0x08c379a00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000353504c0000000000000000000000000000000000000000000000000000000000')
+2026-10-28 14:09:24    retry 3/3 for market move to $1,917.92: ('execution reverted: SPL', '0x08c379a00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000353504c0000000000000000000000000000000000000000000000000000000000')
+2026-10-28 14:09:34    SPL caught; pool price already at $1,917.92 (target $1,917.92) — treating as success
+2026-10-28 14:09:37  step  41/48  price $1,917.92  action Hold                 agent $1,600.17  passive $1,930.75  alpha -330.58
+2026-10-28 14:09:49    tx market move to $1,921.00: 0x591688380006575a0f78a2da0b1f49194503b05ac370dc13fdcee3b4ca4907e3  gas 152258
+2026-10-28 14:09:54  step  42/48  price $1,921.00  action Hold                 agent $1,601.57  passive $1,932.30  alpha -330.74
+2026-10-28 14:10:02    tx market move to $1,923.20: 0xf253c0675c5b47b0859c2efa19a6d34f4e429e7f1adcd650703df77143630f2d  gas 152218
+2026-10-28 14:10:05  step  43/48  price $1,923.20  action Hold                 agent $1,602.56  passive $1,933.41  alpha -330.85
+2026-10-28 14:10:14    tx market move to $1,921.26: 0x05843ce2aa0b2ffe0bc7eaad2a54842b1c8eb21178364135d64623fdfa5216db  gas 152515
+2026-10-28 14:10:25    tx AGENT: decrease liquidity: 0x8081fc007119439965f936bf1aad94978831ae794bc270a38aacd86d08fc28e6  gas 413503
+2026-10-28 14:10:37    tx AGENT: collect: 0x04a3903933f782edad9113467f92f82853e94c531a48390d8682581b996638b7  gas 149647
+2026-10-28 14:10:39  step  44/48  price $1,921.26  action Decrease liquidity   agent $1,601.54  passive $1,932.44  alpha -330.90
+2026-10-28 14:10:43  step  45/48  price $1,921.19  action Hold                 agent $1,601.54  passive $1,932.44  alpha -330.90
+2026-10-28 14:10:49    tx market move to $1,929.71: 0x5e634a362d661e7c2bf7bb54e71006bbbc5e5aa34354955a04a40a30ed1db9cb  gas 152218
+2026-10-28 14:10:53  step  46/48  price $1,929.71  action Hold                 agent $1,605.36  passive $1,936.69  alpha -331.32
+2026-10-28 14:11:02    tx market move to $1,932.30: 0x10f899b34e598f58c16dffbfbe632e644afa84d0a02bdc231ab353ecb84d63a3  gas 152234
+2026-10-28 14:11:06  step  47/48  price $1,932.30  action Hold                 agent $1,606.53  passive $1,937.99  alpha -331.46
+2026-10-28 14:11:13    tx market move to $1,924.48: 0x1328f3ccc5e4793110b0ced30cd09da22778d41a73048a9d2af9938442d6197a  gas 152515
+2026-10-28 14:11:17  step  48/48  price $1,924.48  action Hold                 agent $1,603.02  passive $1,934.07  alpha -331.05
+2026-10-28 14:11:18  Finished at step 48. Wallet balance 0.0442 ETH. Next: python 03_report.py

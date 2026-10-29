@@ -1,0 +1,17 @@
+# Private keys and run state — never commit
+wallet.json
+
+# Build / cache
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

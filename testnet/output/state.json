@@ -1,0 +1,1918 @@
+{
+  "step": 48,
+  "cooldown": 4,
+  "liq_ratio": 0.3500000000000001,
+  "token_id": 233913,
+  "idle": [
+    0.30783068147390874,
+    436.28145445189773
+  ],
+  "center": 2058.66,
+  "cum_cost": 0.6,
+  "fees_collected_usd": 0.8870223079904394,
+  "amm_hist": [
+    1.0,
+    0.9974060796829006,
+    0.9974060796829006,
+    1.0080197798568002,
+    1.0037985874306588,
+    1.002011016875055,
+    0.9974886576705233,
+    0.9981201363994052,
+    1.0080149223281165,
+    1.0033419797343905,
+    0.999538534775048,
+    0.999538534775048,
+    1.0032253990459818,
+    0.9963811411306385,
+    0.9877590277170588,
+    0.9877590277170588,
+    0.9659827266280009,
+    0.973536183731165,
+    0.986199761009589,
+    0.9831686631109559,
+    0.9863163416979979,
+    0.9876618771433847,
+    0.984990236367346,
+    0.9787288818940475,
+    0.9787288818940475,
+    0.9842033167205853,
+    0.9935734895514557,
+    0.9923008170363246,
+    0.9923008170363246,
+    0.9891094206911294,
+    0.9873995705944645,
+    0.9873995705944645,
+    0.9879873315651931,
+    0.9622570021275977,
+    0.9531685659603819,
+    0.9520901945925992,
+    0.9538194748039988,
+    0.9438372533589813,
+    0.946591472122643,
+    0.9361915032108267,
+    0.938634840138731,
+    0.9316351413055096,
+    0.9331312601400913,
+    0.9341999164505068,
+    0.9332575558858675,
+    0.9332575558858675,
+    0.9373621676235998,
+    0.9386202675526799,
+    0.934821680122021
+  ],
+  "mkt_hist": [
+    1.0,
+    0.9974060796829006,
+    0.9980521309978336,
+    1.0080197798568002,
+    1.0037985874306588,
+    1.002011016875055,
+    0.9974886576705235,
+    0.9981201363994054,
+    1.0080149223281163,
+    1.0033419797343903,
+    0.999538534775048,
+    1.0055958730436303,
+    1.0032253990459816,
+    0.9963811411306385,
+    0.9877590277170587,
+    0.9637045456753424,
+    0.9659827266280009,
+    0.973536183731165,
+    0.9861997610095888,
+    0.9831686631109557,
+    0.9863163416979978,
+    0.9876618771433846,
+    0.9849902363673458,
+    0.9787288818940476,
+    0.9820660040997543,
+    0.9842033167205854,
+    0.9935734895514559,
+    0.9923008170363247,
+    0.9918587819261074,
+    0.9891094206911293,
+    0.9873995705944645,
+    0.987987331565193,
+    0.9764895611708588,
+    0.9622570021275977,
+    0.953168565960382,
+    0.9520901945925991,
+    0.9538194748039988,
+    0.9438372533589812,
+    0.9465914721226429,
+    0.9361915032108266,
+    0.938634840138731,
+    0.9316351413055095,
+    0.9331312601400912,
+    0.9341999164505067,
+    0.9332575558858676,
+    0.9332235531850817,
+    0.9373621676235999,
+    0.9386202675526799,
+    0.9348216801220212
+  ],
+  "sent_base": -0.7607197441214134,
+  "prev_action": 0,
+  "norm": {
+    "n": 720048,
+    "mean": [
+      2.0275304708272027e-05,
+      2.981215517870503e-05,
+      0.02388251748700499,
+      0.7249371569673119,
+      0.0015640900726512311,
+      0.006780493940179716,
+      3.903264356162248e-05,
+      -0.001453733790606969,
+      0.015264260160433786,
+      0.1162142523831733,
+      0.003102396398470986,
+      0.501394386972152,
+      0.010980368081035195,
+      1.0653090053419728e-05,
+      0.02805372746556027
+    ],
+    "M2": [
+      36.40547505863484,
+      49.97428086839947,
+      305251.61650276877,
+      52209.542156353105,
+      1.7270709584486104,
+      13.880358229047683,
+      4.805201806213432,
+      7.0302962941237395,
+      681770.2305165611,
+      5731.07475485653,
+      1542.5352748282396,
+      60342.49671640233,
+      71.59225517214438,
+      49.475879538197205,
+      546202.3234683612
+    ]
+  },
+  "rng": 42,
+  "rows": [
+    {
+      "step": 1,
+      "replay_hour_utc": "2026-02-26 02:00",
+      "block": 12012062,
+      "chain_time_utc": "2026-10-28 11:37:36",
+      "market_price": 2053.32,
+      "pool_price": 2053.32,
+      "sentiment": 0.0149,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 1997.4135,
+      "passive_value": 1997.4083,
+      "alpha_usd": 0.0052,
+      "agent_fees_usd": 0.013037,
+      "passive_fees_usd": 0.0039,
+      "liq_ratio": 0.75,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.0,
+      "gas_used": 250435,
+      "test_eth_fee": 2.504e-05,
+      "txs": [
+        {
+          "label": "market move to $2,053.32",
+          "tx": "0xf67ab97a9dc63445568b735a830c0ae7ef7b277b8a215c36714e382911fa8767",
+          "block": 12012062,
+          "time_utc": "2026-10-28 11:37:36",
+          "gas_used": 250435,
+          "eth_fee": 2.5043503756525e-05,
+          "url": "https://sepolia.etherscan.io/tx/0xf67ab97a9dc63445568b735a830c0ae7ef7b277b8a215c36714e382911fa8767"
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "replay_hour_utc": "2026-02-26 03:00",
+      "block": 12012063,
+      "chain_time_utc": "2026-10-28 11:37:48",
+      "market_price": 2054.65,
+      "pool_price": 2053.32,
+      "sentiment": -0.2561,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 1997.4171,
+      "passive_value": 1997.4094,
+      "alpha_usd": 0.0077,
+      "agent_fees_usd": 0.016289,
+      "passive_fees_usd": 0.004873,
+      "liq_ratio": 0.75,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.0,
+      "gas_used": 250176,
+      "test_eth_fee": 2.502e-05,
+      "txs": [
+        {
+          "label": "market move to $2,054.65",
+          "tx": "0x7c8b302e0133983ba2d4bd6c37b403cabc16b6e49895830332c3e91fb7393fe3",
+          "block": 12012063,
+          "time_utc": "2026-10-28 11:37:48",
+          "gas_used": 250176,
+          "eth_fee": 2.501760375264e-05,
+          "url": "https://sepolia.etherscan.io/tx/0x7c8b302e0133983ba2d4bd6c37b403cabc16b6e49895830332c3e91fb7393fe3"
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "replay_hour_utc": "2026-02-26 04:00",
+      "block": 12012064,
+      "chain_time_utc": "2026-10-28 11:38:00",
+      "market_price": 2075.17,
+      "pool_price": 2075.17,
+      "sentiment": -0.4933,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 2008.0327,
+      "passive_value": 2008.0237,
+      "alpha_usd": 0.0091,
+      "agent_fees_usd": 0.06648,
+      "passive_fees_usd": 0.019888,
+      "liq_ratio": 0.75,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.0,
+      "gas_used": 152258,
+      "test_eth_fee": 1.523e-05,
+      "txs": [
+        {
+          "label": "market move to $2,075.17",
+          "tx": "0xd2dedfb77a1f690ae026db7180cc787e75594f7731a4552ea0711c2d825a2bde",
+          "block": 12012064,
+          "time_utc": "2026-10-28 11:38:00",
+          "gas_used": 152258,
+          "eth_fee": 1.522580228387e-05,
+          "url": "https://sepolia.etherscan.io/tx/0xd2dedfb77a1f690ae026db7180cc787e75594f7731a4552ea0711c2d825a2bde"
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "replay_hour_utc": "2026-02-26 05:00",
+      "block": 12012065,
+      "chain_time_utc": "2026-10-28 11:38:12",
+      "market_price": 2066.48,
+      "pool_price": 2066.48,
+      "sentiment": -0.0649,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 2003.8741,
+      "passive_value": 2003.8212,
+      "alpha_usd": 0.0529,
+      "agent_fees_usd": 0.087547,
+      "passive_fees_usd": 0.026191,
+      "liq_ratio": 0.75,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.0,
+      "gas_used": 152487,
+      "test_eth_fee": 1.525e-05,
+      "txs": [
+        {
+          "label": "market move to $2,066.48",
+          "tx": "0x3940c29077926c9899f45e87f06f64583fb8107b5fe169dfdd104ca794201883",
+          "block": 12012065,
+          "time_utc": "2026-10-28 11:38:12",
+          "gas_used": 152487,
+          "eth_fee": 1.5248702287305e-05,
+          "url": "https://sepolia.etherscan.io/tx/0x3940c29077926c9899f45e87f06f64583fb8107b5fe169dfdd104ca794201883"
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "replay_hour_utc": "2026-02-26 06:00",
+      "block": 12012066,
+      "chain_time_utc": "2026-10-28 11:38:24",
+      "market_price": 2062.8,
+      "pool_price": 2062.8,
+      "sentiment": 0.2542,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 2002.1041,
+      "passive_value": 2002.0389,
+      "alpha_usd": 0.0652,
+      "agent_fees_usd": 0.096455,
+      "passive_fees_usd": 0.028856,
+      "liq_ratio": 0.75,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.0,
+      "gas_used": 152463,
+      "test_eth_fee": 1.525e-05,
+      "txs": [
+        {
+          "label": "market move to $2,062.80",
+          "tx": "0x90c6d1798c1a559f915186396ee3e466cce01311ef2f6fd8e8552b8b36da876d",
+          "block": 12012066,
+          "time_utc": "2026-10-28 11:38:24",
+          "gas_used": 152463,
+          "eth_fee": 1.5246302286945e-05,
+          "url": "https://sepolia.etherscan.io/tx/0x90c6d1798c1a559f915186396ee3e466cce01311ef2f6fd8e8552b8b36da876d"
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "replay_hour_utc": "2026-02-26 07:00",
+      "block": 12012067,
+      "chain_time_utc": "2026-10-28 11:38:36",
+      "market_price": 2053.49,
+      "pool_price": 2053.49,
+      "sentiment": 0.3362,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 1997.6023,
+      "passive_value": 1997.5227,
+      "alpha_usd": 0.0797,
+      "agent_fees_usd": 0.118955,
+      "passive_fees_usd": 0.035587,
+      "liq_ratio": 0.75,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.0,
+      "gas_used": 152499,
+      "test_eth_fee": 1.525e-05,
+      "txs": [
+        {
+          "label": "market move to $2,053.49",
+          "tx": "0x89c5a8d72b6b2751f36a8233a33b13bae9949c9de71007656929bd42578fdfea",
+          "block": 12012067,
+          "time_utc": "2026-10-28 11:38:36",
+          "gas_used": 152499,
+          "eth_fee": 1.5249902287485e-05,
+          "url": "https://sepolia.etherscan.io/tx/0x89c5a8d72b6b2751f36a8233a33b13bae9949c9de71007656929bd42578fdfea"
+        }
+      ]
+    },
+    {
+      "step": 7,
+      "replay_hour_utc": "2026-02-26 08:00",
+      "block": 12012068,
+      "chain_time_utc": "2026-10-28 11:38:48",
+      "market_price": 2054.79,
+      "pool_price": 2054.79,
+      "sentiment": 0.095,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 1998.2394,
+      "passive_value": 1998.1558,
+      "alpha_usd": 0.0836,
+      "agent_fees_usd": 0.122175,
+      "passive_fees_usd": 0.03655,
+      "liq_ratio": 0.75,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.0,
+      "gas_used": 152246,
+      "test_eth_fee": 1.522e-05,
+      "txs": [
+        {
+          "label": "market move to $2,054.79",
+          "tx": "0x36b470f1548983faea3005989041a427221e7d3ee2ca99477e5001b32a78cfd3",
+          "block": 12012068,
+          "time_utc": "2026-10-28 11:38:48",
+          "gas_used": 152246,
+          "eth_fee": 1.522460228369e-05,
+          "url": "https://sepolia.etherscan.io/tx/0x36b470f1548983faea3005989041a427221e7d3ee2ca99477e5001b32a78cfd3"
+        }
+      ]
+    },
+    {
+      "step": 8,
+      "replay_hour_utc": "2026-02-26 09:00",
+      "block": 12012069,
+      "chain_time_utc": "2026-10-28 11:39:00",
+      "market_price": 2075.16,
+      "pool_price": 2075.16,
+      "sentiment": 0.0205,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 2008.134,
+      "passive_value": 2008.0505,
+      "alpha_usd": 0.0834,
+      "agent_fees_usd": 0.172512,
+      "passive_fees_usd": 0.051609,
+      "liq_ratio": 0.75,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.0,
+      "gas_used": 152258,
+      "test_eth_fee": 1.523e-05,
+      "txs": [
+        {
+          "label": "market move to $2,075.16",
+          "tx": "0xf35c50c1b2da88392cf5c14eb4f8baaadd4074cfbc29edc0bcb958824c26acb5",
+          "block": 12012069,
+          "time_utc": "2026-10-28 11:39:00",
+          "gas_used": 152258,
+          "eth_fee": 1.522580228387e-05,
+          "url": "https://sepolia.etherscan.io/tx/0xf35c50c1b2da88392cf5c14eb4f8baaadd4074cfbc29edc0bcb958824c26acb5"
+        }
+      ]
+    },
+    {
+      "step": 9,
+      "replay_hour_utc": "2026-02-26 10:00",
+      "block": 12012070,
+      "chain_time_utc": "2026-10-28 11:39:12",
+      "market_price": 2065.54,
+      "pool_price": 2065.54,
+      "sentiment": 0.2444,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 2003.5282,
+      "passive_value": 2003.3977,
+      "alpha_usd": 0.1305,
+      "agent_fees_usd": 0.195584,
+      "passive_fees_usd": 0.058512,
+      "liq_ratio": 0.75,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.0,
+      "gas_used": 152475,
+      "test_eth_fee": 1.525e-05,
+      "txs": [
+        {
+          "label": "market move to $2,065.54",
+          "tx": "0xa1129845a0731ffab9afe6cdfe5c4c1aa5d20b6ecc903d2f7072e3ba2c30f985",
+          "block": 12012070,
+          "time_utc": "2026-10-28 11:39:12",
+          "gas_used": 152475,
+          "eth_fee": 1.5247502287125e-05,
+          "url": "https://sepolia.etherscan.io/tx/0xa1129845a0731ffab9afe6cdfe5c4c1aa5d20b6ecc903d2f7072e3ba2c30f985"
+        }
+      ]
+    },
+    {
+      "step": 10,
+      "replay_hour_utc": "2026-02-26 11:00",
+      "block": 12012071,
+      "chain_time_utc": "2026-10-28 11:39:24",
+      "market_price": 2057.71,
+      "pool_price": 2057.71,
+      "sentiment": 0.1562,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 1999.7527,
+      "passive_value": 1999.6026,
+      "alpha_usd": 0.1501,
+      "agent_fees_usd": 0.214323,
+      "passive_fees_usd": 0.064118,
+      "liq_ratio": 0.75,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.0,
+      "gas_used": 152433,
+      "test_eth_fee": 1.524e-05,
+      "txs": [
+        {
+          "label": "market move to $2,057.71",
+          "tx": "0x20bacce8cd2759df791cb9a932da5c74b48bf07f9a877f4ce0bc8d61e8416cb2",
+          "block": 12012071,
+          "time_utc": "2026-10-28 11:39:24",
+          "gas_used": 152433,
+          "eth_fee": 1.5243302286495e-05,
+          "url": "https://sepolia.etherscan.io/tx/0x20bacce8cd2759df791cb9a932da5c74b48bf07f9a877f4ce0bc8d61e8416cb2"
+        }
+      ]
+    },
+    {
+      "step": 11,
+      "replay_hour_utc": "2026-02-26 12:00",
+      "block": 12012074,
+      "chain_time_utc": "2026-10-28 11:40:00",
+      "market_price": 2070.18,
+      "pool_price": 2057.71,
+      "sentiment": 0.1146,
+      "action": "Decrease liquidity",
+      "note": "",
+      "agent_value": 2169.1414,
+      "passive_value": 1999.6117,
+      "alpha_usd": 169.5297,
+      "agent_fees_usd": 169.692153,
+      "passive_fees_usd": 0.064118,
+      "liq_ratio": 0.65,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.15,
+      "gas_used": 1107048,
+      "test_eth_fee": 0.0001107,
+      "txs": [
+        {
+          "label": "market move to $2,070.18",
+          "tx": "0xbc7318a8eb08f6448675ce00760cbfc5b9431c7787917b83035ca19ddf886bb6",
+          "block": 12012072,
+          "time_utc": "2026-10-28 11:39:36",
+          "gas_used": 152230,
+          "eth_fee": 1.522300228345e-05,
+          "url": "https://sepolia.etherscan.io/tx/0xbc7318a8eb08f6448675ce00760cbfc5b9431c7787917b83035ca19ddf886bb6"
+        },
+        {
+          "label": "AGENT: decrease liquidity",
+          "tx": "0x26dc783c6175839da2dc81846a19466d56c0894cac47d56ce853811563e641e7",
+          "block": 12012073,
+          "time_utc": "2026-10-28 11:39:48",
+          "gas_used": 805171,
+          "eth_fee": 8.0517112077565e-05,
+          "url": "https://sepolia.etherscan.io/tx/0x26dc783c6175839da2dc81846a19466d56c0894cac47d56ce853811563e641e7"
+        },
+        {
+          "label": "AGENT: collect",
+          "tx": "0x7ddd3b9ad97bac02f0ee43e3c1c80c58ded6b72914e4d15a4e3709a0eb1428d5",
+          "block": 12012074,
+          "time_utc": "2026-10-28 11:40:00",
+          "gas_used": 149647,
+          "eth_fee": 1.4964702244705e-05,
+          "url": "https://sepolia.etherscan.io/tx/0x7ddd3b9ad97bac02f0ee43e3c1c80c58ded6b72914e4d15a4e3709a0eb1428d5"
+        }
+      ]
+    },
+    {
+      "step": 12,
+      "replay_hour_utc": "2026-02-26 13:00",
+      "block": 12012075,
+      "chain_time_utc": "2026-10-28 11:40:12",
+      "market_price": 2065.3,
+      "pool_price": 2065.3,
+      "sentiment": 0.1651,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 2003.3228,
+      "passive_value": 2003.2997,
+      "alpha_usd": 0.0231,
+      "agent_fees_usd": 0.22462,
+      "passive_fees_usd": 0.076893,
+      "liq_ratio": 0.65,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.15,
+      "gas_used": 152491,
+      "test_eth_fee": 1.525e-05,
+      "txs": [
+        {
+          "label": "market move to $2,065.30",
+          "tx": "0x809fe5ac1f99eaf3e81325d9601ea877df7aed61b9fe21fdfb4e499f2d306e66",
+          "block": 12012075,
+          "time_utc": "2026-10-28 11:40:12",
+          "gas_used": 152491,
+          "eth_fee": 1.5249102287365e-05,
+          "url": "https://sepolia.etherscan.io/tx/0x809fe5ac1f99eaf3e81325d9601ea877df7aed61b9fe21fdfb4e499f2d306e66"
+        }
+      ]
+    },
+    {
+      "step": 13,
+      "replay_hour_utc": "2026-02-26 14:00",
+      "block": 12012076,
+      "chain_time_utc": "2026-10-28 11:40:24",
+      "market_price": 2051.21,
+      "pool_price": 2051.21,
+      "sentiment": 0.0489,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 1996.514,
+      "passive_value": 1996.4648,
+      "alpha_usd": 0.0492,
+      "agent_fees_usd": 0.254282,
+      "passive_fees_usd": 0.08691,
+      "liq_ratio": 0.65,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.15,
+      "gas_used": 152515,
+      "test_eth_fee": 1.525e-05,
+      "txs": [
+        {
+          "label": "market move to $2,051.21",
+          "tx": "0x43cccd8dbdcddbc2924ceb7ce4868cd842af852fa1a396a7ba4a7dd47ba323a2",
+          "block": 12012076,
+          "time_utc": "2026-10-28 11:40:24",
+          "gas_used": 152515,
+          "eth_fee": 1.5251502287725e-05,
+          "url": "https://sepolia.etherscan.io/tx/0x43cccd8dbdcddbc2924ceb7ce4868cd842af852fa1a396a7ba4a7dd47ba323a2"
+        }
+      ]
+    },
+    {
+      "step": 14,
+      "replay_hour_utc": "2026-02-26 15:00",
+      "block": 12012077,
+      "chain_time_utc": "2026-10-28 11:40:36",
+      "market_price": 2033.46,
+      "pool_price": 2033.46,
+      "sentiment": -0.1844,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 1987.8392,
+      "passive_value": 1987.8208,
+      "alpha_usd": 0.0183,
+      "agent_fees_usd": 0.291502,
+      "passive_fees_usd": 0.099479,
+      "liq_ratio": 0.65,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.15,
+      "gas_used": 151491,
+      "test_eth_fee": 1.515e-05,
+      "txs": [
+        {
+          "label": "market move to $2,033.46",
+          "tx": "0x46bd5ff33c950c505cea3a09afa60797a8f30b3e5a5716c8dea4e623c9826de0",
+          "block": 12012077,
+          "time_utc": "2026-10-28 11:40:36",
+          "gas_used": 151491,
+          "eth_fee": 1.5149102272365e-05,
+          "url": "https://sepolia.etherscan.io/tx/0x46bd5ff33c950c505cea3a09afa60797a8f30b3e5a5716c8dea4e623c9826de0"
+        }
+      ]
+    },
+    {
+      "step": 15,
+      "replay_hour_utc": "2026-02-26 16:00",
+      "block": 12012078,
+      "chain_time_utc": "2026-10-28 11:40:48",
+      "market_price": 1983.94,
+      "pool_price": 2033.46,
+      "sentiment": -0.4301,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 1988.3841,
+      "passive_value": 1987.9718,
+      "alpha_usd": 0.4123,
+      "agent_fees_usd": 0.398958,
+      "passive_fees_usd": 0.099479,
+      "liq_ratio": 0.65,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.15,
+      "gas_used": 152477,
+      "test_eth_fee": 1.525e-05,
+      "txs": [
+        {
+          "label": "market move to $1,983.94",
+          "tx": "0xe8b76178796b64a992b9cc5f2c8c1401b6202ab28e6f17319cf80907ca14f604",
+          "block": 12012078,
+          "time_utc": "2026-10-28 11:40:48",
+          "gas_used": 152477,
+          "eth_fee": 1.5247702287155e-05,
+          "url": "https://sepolia.etherscan.io/tx/0xe8b76178796b64a992b9cc5f2c8c1401b6202ab28e6f17319cf80907ca14f604"
+        }
+      ]
+    },
+    {
+      "step": 16,
+      "replay_hour_utc": "2026-02-26 17:00",
+      "block": 12012080,
+      "chain_time_utc": "2026-10-28 11:41:12",
+      "market_price": 1988.63,
+      "pool_price": 1988.63,
+      "sentiment": -0.523,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 1965.4576,
+      "passive_value": 1965.8264,
+      "alpha_usd": -0.3688,
+      "agent_fees_usd": 0.404996,
+      "passive_fees_usd": 0.137952,
+      "liq_ratio": 0.65,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.15,
+      "gas_used": 152230,
+      "test_eth_fee": 1.522e-05,
+      "txs": [
+        {
+          "label": "market move to $1,988.63",
+          "tx": "0xcbed1112c159d03f26eb08f1f0a671ba3c8c1014601d02555b6deb5c212c1fed",
+          "block": 12012080,
+          "time_utc": "2026-10-28 11:41:12",
+          "gas_used": 152230,
+          "eth_fee": 1.522300228345e-05,
+          "url": "https://sepolia.etherscan.io/tx/0xcbed1112c159d03f26eb08f1f0a671ba3c8c1014601d02555b6deb5c212c1fed"
+        }
+      ]
+    },
+    {
+      "step": 17,
+      "replay_hour_utc": "2026-02-26 18:00",
+      "block": 12012081,
+      "chain_time_utc": "2026-10-28 11:41:24",
+      "market_price": 2004.18,
+      "pool_price": 2004.18,
+      "sentiment": -0.6938,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 1973.3759,
+      "passive_value": 1973.509,
+      "alpha_usd": -0.133,
+      "agent_fees_usd": 0.43984,
+      "passive_fees_usd": 0.150224,
+      "liq_ratio": 0.65,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.15,
+      "gas_used": 152202,
+      "test_eth_fee": 1.522e-05,
+      "txs": [
+        {
+          "label": "market move to $2,004.18",
+          "tx": "0x9361493cc2028c1e9c41fcdac2eb49d10dbe81c2e65e0d6b2cf73b9d1ce246b2",
+          "block": 12012081,
+          "time_utc": "2026-10-28 11:41:24",
+          "gas_used": 152202,
+          "eth_fee": 1.522020228303e-05,
+          "url": "https://sepolia.etherscan.io/tx/0x9361493cc2028c1e9c41fcdac2eb49d10dbe81c2e65e0d6b2cf73b9d1ce246b2"
+        }
+      ]
+    },
+    {
+      "step": 18,
+      "replay_hour_utc": "2026-02-26 19:00",
+      "block": 12012082,
+      "chain_time_utc": "2026-10-28 11:41:36",
+      "market_price": 2030.25,
+      "pool_price": 2030.25,
+      "sentiment": -0.798,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 1986.4584,
+      "passive_value": 1986.3225,
+      "alpha_usd": 0.1359,
+      "agent_fees_usd": 0.497966,
+      "passive_fees_usd": 0.170698,
+      "liq_ratio": 0.65,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.15,
+      "gas_used": 152200,
+      "test_eth_fee": 1.522e-05,
+      "txs": [
+        {
+          "label": "market move to $2,030.25",
+          "tx": "0x723bb3345a90559e6e27491d346c90304cfd23e4abcd897437f4284d054fa2ef",
+          "block": 12012082,
+          "time_utc": "2026-10-28 11:41:36",
+          "gas_used": 152200,
+          "eth_fee": 1.5220002283e-05,
+          "url": "https://sepolia.etherscan.io/tx/0x723bb3345a90559e6e27491d346c90304cfd23e4abcd897437f4284d054fa2ef"
+        }
+      ]
+    },
+    {
+      "step": 19,
+      "replay_hour_utc": "2026-02-26 20:00",
+      "block": 12012083,
+      "chain_time_utc": "2026-10-28 11:41:48",
+      "market_price": 2024.01,
+      "pool_price": 2024.01,
+      "sentiment": -0.7839,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 1983.3755,
+      "passive_value": 1983.2722,
+      "alpha_usd": 0.1032,
+      "agent_fees_usd": 0.510692,
+      "passive_fees_usd": 0.174993,
+      "liq_ratio": 0.65,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.15,
+      "gas_used": 152477,
+      "test_eth_fee": 1.525e-05,
+      "txs": [
+        {
+          "label": "market move to $2,024.01",
+          "tx": "0xa098702e562886ab5fb3b9fb2708a2f09728e89a97659ed248503bc3cb41ff99",
+          "block": 12012083,
+          "time_utc": "2026-10-28 11:41:48",
+          "gas_used": 152477,
+          "eth_fee": 1.5247702287155e-05,
+          "url": "https://sepolia.etherscan.io/tx/0xa098702e562886ab5fb3b9fb2708a2f09728e89a97659ed248503bc3cb41ff99"
+        }
+      ]
+    },
+    {
+      "step": 20,
+      "replay_hour_utc": "2026-02-26 21:00",
+      "block": 12012084,
+      "chain_time_utc": "2026-10-28 11:42:00",
+      "market_price": 2030.49,
+      "pool_price": 2030.49,
+      "sentiment": -0.8312,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 1986.6044,
+      "passive_value": 1986.4493,
+      "alpha_usd": 0.1551,
+      "agent_fees_usd": 0.525148,
+      "passive_fees_usd": 0.180085,
+      "liq_ratio": 0.65,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.15,
+      "gas_used": 152206,
+      "test_eth_fee": 1.522e-05,
+      "txs": [
+        {
+          "label": "market move to $2,030.49",
+          "tx": "0x181cd5db560bcebee1a1c98df20036212c12e360eda0fb42d07df781f41247af",
+          "block": 12012084,
+          "time_utc": "2026-10-28 11:42:00",
+          "gas_used": 152206,
+          "eth_fee": 1.522060228309e-05,
+          "url": "https://sepolia.etherscan.io/tx/0x181cd5db560bcebee1a1c98df20036212c12e360eda0fb42d07df781f41247af"
+        }
+      ]
+    },
+    {
+      "step": 21,
+      "replay_hour_utc": "2026-02-26 22:00",
+      "block": 12012085,
+      "chain_time_utc": "2026-10-28 11:42:12",
+      "market_price": 2033.26,
+      "pool_price": 2033.26,
+      "sentiment": -0.7204,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 1987.9802,
+      "passive_value": 1987.8058,
+      "alpha_usd": 0.1743,
+      "agent_fees_usd": 0.531321,
+      "passive_fees_usd": 0.182259,
+      "liq_ratio": 0.65,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.15,
+      "gas_used": 152230,
+      "test_eth_fee": 1.522e-05,
+      "txs": [
+        {
+          "label": "market move to $2,033.26",
+          "tx": "0x32b8f3ec18adf280dfb34280d0aa0cedc959eec2100670ae3d7e85a2f23e94f2",
+          "block": 12012085,
+          "time_utc": "2026-10-28 11:42:12",
+          "gas_used": 152230,
+          "eth_fee": 1.522300228345e-05,
+          "url": "https://sepolia.etherscan.io/tx/0x32b8f3ec18adf280dfb34280d0aa0cedc959eec2100670ae3d7e85a2f23e94f2"
+        }
+      ]
+    },
+    {
+      "step": 22,
+      "replay_hour_utc": "2026-02-26 23:00",
+      "block": 12012090,
+      "chain_time_utc": "2026-10-28 11:43:12",
+      "market_price": 2027.76,
+      "pool_price": 2027.76,
+      "sentiment": -0.7891,
+      "action": "Decrease liquidity",
+      "note": "",
+      "agent_value": 1816.595,
+      "passive_value": 1985.1195,
+      "alpha_usd": -168.5245,
+      "agent_fees_usd": 0.542494,
+      "passive_fees_usd": 0.18603,
+      "liq_ratio": 0.55,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.3,
+      "gas_used": 800056,
+      "test_eth_fee": 8.001e-05,
+      "txs": [
+        {
+          "label": "market move to $2,027.76",
+          "tx": "0x17ef5f8902aabc1dde63f338696d327b441f33308bbb300d2f882c92ecb4c8d8",
+          "block": 12012086,
+          "time_utc": "2026-10-28 11:42:24",
+          "gas_used": 152499,
+          "eth_fee": 1.5249902287485e-05,
+          "url": "https://sepolia.etherscan.io/tx/0x17ef5f8902aabc1dde63f338696d327b441f33308bbb300d2f882c92ecb4c8d8"
+        },
+        {
+          "label": "AGENT: decrease liquidity",
+          "tx": "0xb534b179e01cbbf267649cea0ea23a4fa4af35c41478c42e69995af964050c46",
+          "block": 12012087,
+          "time_utc": "2026-10-28 11:42:36",
+          "gas_used": 413503,
+          "eth_fee": 4.1350306202545e-05,
+          "url": "https://sepolia.etherscan.io/tx/0xb534b179e01cbbf267649cea0ea23a4fa4af35c41478c42e69995af964050c46"
+        },
+        {
+          "label": "AGENT: collect",
+          "tx": "0x5fe44e721922f9fbc877e8995e8fb775a6a7e4b654c02310ca95334785aa69f9",
+          "block": 12012090,
+          "time_utc": "2026-10-28 11:43:12",
+          "gas_used": 84407,
+          "eth_fee": 8.440701266105e-06,
+          "url": "https://sepolia.etherscan.io/tx/0x5fe44e721922f9fbc877e8995e8fb775a6a7e4b654c02310ca95334785aa69f9"
+        }
+      ]
+    },
+    {
+      "step": 23,
+      "replay_hour_utc": "2026-02-27 00:00",
+      "block": 12012091,
+      "chain_time_utc": "2026-10-28 11:43:24",
+      "market_price": 2014.87,
+      "pool_price": 2014.87,
+      "sentiment": -0.8036,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 1810.6565,
+      "passive_value": 1978.8094,
+      "alpha_usd": -168.1529,
+      "agent_fees_usd": 0.565724,
+      "passive_fees_usd": 0.194845,
+      "liq_ratio": 0.55,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.3,
+      "gas_used": 152485,
+      "test_eth_fee": 1.525e-05,
+      "txs": [
+        {
+          "label": "market move to $2,014.87",
+          "tx": "0x81fd6b0211cac5151f6f011665079812e0c48bf65d6c644a946d7b009dd35407",
+          "block": 12012091,
+          "time_utc": "2026-10-28 11:43:24",
+          "gas_used": 152485,
+          "eth_fee": 1.5248502287275e-05,
+          "url": "https://sepolia.etherscan.io/tx/0x81fd6b0211cac5151f6f011665079812e0c48bf65d6c644a946d7b009dd35407"
+        }
+      ]
+    },
+    {
+      "step": 24,
+      "replay_hour_utc": "2026-02-27 01:00",
+      "block": 12012092,
+      "chain_time_utc": "2026-10-28 11:43:36",
+      "market_price": 2021.74,
+      "pool_price": 2014.87,
+      "sentiment": -0.6953,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 1810.6759,
+      "passive_value": 1978.8173,
+      "alpha_usd": -168.1414,
+      "agent_fees_usd": 0.578154,
+      "passive_fees_usd": 0.199915,
+      "liq_ratio": 0.55,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.3,
+      "gas_used": 152214,
+      "test_eth_fee": 1.522e-05,
+      "txs": [
+        {
+          "label": "market move to $2,021.74",
+          "tx": "0x3e30b209e29f84fc2f331d48007315446bc377e4b9525f8bb57c76009211636c",
+          "block": 12012092,
+          "time_utc": "2026-10-28 11:43:36",
+          "gas_used": 152214,
+          "eth_fee": 1.522140228321e-05,
+          "url": "https://sepolia.etherscan.io/tx/0x3e30b209e29f84fc2f331d48007315446bc377e4b9525f8bb57c76009211636c"
+        }
+      ]
+    },
+    {
+      "step": 25,
+      "replay_hour_utc": "2026-02-27 02:00",
+      "block": 12012093,
+      "chain_time_utc": "2026-10-28 11:43:48",
+      "market_price": 2026.14,
+      "pool_price": 2026.14,
+      "sentiment": -0.587,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 1815.8922,
+      "passive_value": 1984.3442,
+      "alpha_usd": -168.452,
+      "agent_fees_usd": 0.586234,
+      "passive_fees_usd": 0.20379,
+      "liq_ratio": 0.55,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.3,
+      "gas_used": 152242,
+      "test_eth_fee": 1.522e-05,
+      "txs": [
+        {
+          "label": "market move to $2,026.14",
+          "tx": "0x5fb75ce70fed9e8fc7f97b5760f7ad5251c1c083718f42aca5e48aa5bebc2051",
+          "block": 12012093,
+          "time_utc": "2026-10-28 11:43:48",
+          "gas_used": 152242,
+          "eth_fee": 1.522420228363e-05,
+          "url": "https://sepolia.etherscan.io/tx/0x5fb75ce70fed9e8fc7f97b5760f7ad5251c1c083718f42aca5e48aa5bebc2051"
+        }
+      ]
+    },
+    {
+      "step": 26,
+      "replay_hour_utc": "2026-02-27 03:00",
+      "block": 12012094,
+      "chain_time_utc": "2026-10-28 11:44:00",
+      "market_price": 2045.43,
+      "pool_price": 2045.43,
+      "sentiment": -0.1153,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 1824.7665,
+      "passive_value": 1993.7822,
+      "alpha_usd": -169.0157,
+      "agent_fees_usd": 0.621207,
+      "passive_fees_usd": 0.219047,
+      "liq_ratio": 0.55,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.3,
+      "gas_used": 152258,
+      "test_eth_fee": 1.523e-05,
+      "txs": [
+        {
+          "label": "market move to $2,045.43",
+          "tx": "0x5075790e334d49ecd3dfa4f96865992966c42c26c1909c6866fc4ce11c4ed48f",
+          "block": 12012094,
+          "time_utc": "2026-10-28 11:44:00",
+          "gas_used": 152258,
+          "eth_fee": 1.522580228387e-05,
+          "url": "https://sepolia.etherscan.io/tx/0x5075790e334d49ecd3dfa4f96865992966c42c26c1909c6866fc4ce11c4ed48f"
+        }
+      ]
+    },
+    {
+      "step": 27,
+      "replay_hour_utc": "2026-02-27 04:00",
+      "block": 12012095,
+      "chain_time_utc": "2026-10-28 11:44:12",
+      "market_price": 2042.81,
+      "pool_price": 2042.81,
+      "sentiment": 0.2001,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 1823.577,
+      "passive_value": 1992.5048,
+      "alpha_usd": -168.9279,
+      "agent_fees_usd": 0.625884,
+      "passive_fees_usd": 0.2189,
+      "liq_ratio": 0.55,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.3,
+      "gas_used": 152457,
+      "test_eth_fee": 1.525e-05,
+      "txs": [
+        {
+          "label": "market move to $2,042.81",
+          "tx": "0x025e48f7369421d7c74b351946b195181b0a31a62d8a348b7462bb5d53586b30",
+          "block": 12012095,
+          "time_utc": "2026-10-28 11:44:12",
+          "gas_used": 152457,
+          "eth_fee": 1.5245702286855e-05,
+          "url": "https://sepolia.etherscan.io/tx/0x025e48f7369421d7c74b351946b195181b0a31a62d8a348b7462bb5d53586b30"
+        }
+      ]
+    },
+    {
+      "step": 28,
+      "replay_hour_utc": "2026-02-27 05:00",
+      "block": 12012096,
+      "chain_time_utc": "2026-10-28 11:44:24",
+      "market_price": 2041.9,
+      "pool_price": 2042.81,
+      "sentiment": 0.3144,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 1823.5787,
+      "passive_value": 1992.5075,
+      "alpha_usd": -168.9287,
+      "agent_fees_usd": 0.627521,
+      "passive_fees_usd": 0.221489,
+      "liq_ratio": 0.55,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.3,
+      "gas_used": 152505,
+      "test_eth_fee": 1.525e-05,
+      "txs": [
+        {
+          "label": "market move to $2,041.90",
+          "tx": "0xbc36ec46e164f74396a41af327bd848f63c25fa5e757f421c06d7143b800a4c8",
+          "block": 12012096,
+          "time_utc": "2026-10-28 11:44:24",
+          "gas_used": 152505,
+          "eth_fee": 1.5250502287575e-05,
+          "url": "https://sepolia.etherscan.io/tx/0xbc36ec46e164f74396a41af327bd848f63c25fa5e757f421c06d7143b800a4c8"
+        }
+      ]
+    },
+    {
+      "step": 29,
+      "replay_hour_utc": "2026-02-27 06:00",
+      "block": 12012097,
+      "chain_time_utc": "2026-10-28 11:44:36",
+      "market_price": 2036.24,
+      "pool_price": 2036.24,
+      "sentiment": 0.4407,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 1820.5853,
+      "passive_value": 1989.3049,
+      "alpha_usd": -168.7195,
+      "agent_fees_usd": 0.637599,
+      "passive_fees_usd": 0.225263,
+      "liq_ratio": 0.55,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.3,
+      "gas_used": 152463,
+      "test_eth_fee": 1.525e-05,
+      "txs": [
+        {
+          "label": "market move to $2,036.24",
+          "tx": "0x916be8bc9b6368c01ebc03fbb68712bc4fdc2c7b49bc6b909ff0c9f64e3b2f1c",
+          "block": 12012097,
+          "time_utc": "2026-10-28 11:44:36",
+          "gas_used": 152463,
+          "eth_fee": 1.5246302286945e-05,
+          "url": "https://sepolia.etherscan.io/tx/0x916be8bc9b6368c01ebc03fbb68712bc4fdc2c7b49bc6b909ff0c9f64e3b2f1c"
+        }
+      ]
+    },
+    {
+      "step": 30,
+      "replay_hour_utc": "2026-02-27 07:00",
+      "block": 12012098,
+      "chain_time_utc": "2026-10-28 11:44:48",
+      "market_price": 2032.72,
+      "pool_price": 2032.72,
+      "sentiment": 0.4755,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 1818.9773,
+      "passive_value": 1987.5873,
+      "alpha_usd": -168.61,
+      "agent_fees_usd": 0.643867,
+      "passive_fees_usd": 0.227639,
+      "liq_ratio": 0.55,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.3,
+      "gas_used": 152475,
+      "test_eth_fee": 1.525e-05,
+      "txs": [
+        {
+          "label": "market move to $2,032.72",
+          "tx": "0x36d53b8368eeee09c5951b25b20ff353a0bab7877bff3070f540be6f486d9a2e",
+          "block": 12012098,
+          "time_utc": "2026-10-28 11:44:48",
+          "gas_used": 152475,
+          "eth_fee": 1.5247502287125e-05,
+          "url": "https://sepolia.etherscan.io/tx/0x36d53b8368eeee09c5951b25b20ff353a0bab7877bff3070f540be6f486d9a2e"
+        }
+      ]
+    },
+    {
+      "step": 31,
+      "replay_hour_utc": "2026-02-27 08:00",
+      "block": 12012099,
+      "chain_time_utc": "2026-10-28 11:45:00",
+      "market_price": 2033.93,
+      "pool_price": 2032.72,
+      "sentiment": 0.3459,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 1818.9797,
+      "passive_value": 1987.5882,
+      "alpha_usd": -168.6086,
+      "agent_fees_usd": 0.646049,
+      "passive_fees_usd": 0.228529,
+      "liq_ratio": 0.55,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.3,
+      "gas_used": 152204,
+      "test_eth_fee": 1.522e-05,
+      "txs": [
+        {
+          "label": "market move to $2,033.93",
+          "tx": "0xd1f6e34717258256f6cb7db8593fe399e50232a86aa958a7b8f8b1af23e6b8dc",
+          "block": 12012099,
+          "time_utc": "2026-10-28 11:45:00",
+          "gas_used": 152204,
+          "eth_fee": 1.522040228306e-05,
+          "url": "https://sepolia.etherscan.io/tx/0xd1f6e34717258256f6cb7db8593fe399e50232a86aa958a7b8f8b1af23e6b8dc"
+        }
+      ]
+    },
+    {
+      "step": 32,
+      "replay_hour_utc": "2026-02-27 09:00",
+      "block": 12012100,
+      "chain_time_utc": "2026-10-28 11:45:12",
+      "market_price": 2010.26,
+      "pool_price": 2033.93,
+      "sentiment": 0.3112,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 1819.6613,
+      "passive_value": 1988.2312,
+      "alpha_usd": -168.5699,
+      "agent_fees_usd": 0.689113,
+      "passive_fees_usd": 0.246159,
+      "liq_ratio": 0.55,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.3,
+      "gas_used": 152459,
+      "test_eth_fee": 1.525e-05,
+      "txs": [
+        {
+          "label": "market move to $2,010.26",
+          "tx": "0x98b206f1a2fe74fb3854f26daaed42a35b5d406d4cf882abfb4334cd1887148c",
+          "block": 12012100,
+          "time_utc": "2026-10-28 11:45:12",
+          "gas_used": 152459,
+          "eth_fee": 1.5245902286885e-05,
+          "url": "https://sepolia.etherscan.io/tx/0x98b206f1a2fe74fb3854f26daaed42a35b5d406d4cf882abfb4334cd1887148c"
+        }
+      ]
+    },
+    {
+      "step": 33,
+      "replay_hour_utc": "2026-02-27 10:00",
+      "block": 12012212,
+      "chain_time_utc": "2026-10-28 12:07:36",
+      "market_price": 1980.96,
+      "pool_price": 1980.96,
+      "sentiment": 0.52,
+      "action": "Decrease liquidity",
+      "note": "",
+      "agent_value": 1628.0762,
+      "passive_value": 1962.1581,
+      "alpha_usd": -334.0818,
+      "agent_fees_usd": 0.739709,
+      "passive_fees_usd": 0.264081,
+      "liq_ratio": 0.45,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.45,
+      "gas_used": 647557,
+      "test_eth_fee": 6.476e-05,
+      "txs": [
+        {
+          "label": "AGENT: decrease liquidity",
+          "tx": "0x221660b2ce1a618fbf86e4888137fbfaf85142a2d7f44c540e508e6d62c35c16",
+          "block": 12012209,
+          "time_utc": "2026-10-28 12:07:00",
+          "gas_used": 413503,
+          "eth_fee": 4.1350306616048e-05,
+          "url": "https://sepolia.etherscan.io/tx/0x221660b2ce1a618fbf86e4888137fbfaf85142a2d7f44c540e508e6d62c35c16"
+        },
+        {
+          "label": "AGENT: collect",
+          "tx": "0xe41d2b7c79c20d8a77f62e693d7b8ffb0aa3265d8054eeaa1afd0d45e91ea66b",
+          "block": 12012212,
+          "time_utc": "2026-10-28 12:07:36",
+          "gas_used": 84407,
+          "eth_fee": 8.440701350512e-06,
+          "url": "https://sepolia.etherscan.io/tx/0xe41d2b7c79c20d8a77f62e693d7b8ffb0aa3265d8054eeaa1afd0d45e91ea66b"
+        }
+      ]
+    },
+    {
+      "step": 34,
+      "replay_hour_utc": "2026-02-27 11:00",
+      "block": 12012511,
+      "chain_time_utc": "2026-10-28 13:07:36",
+      "market_price": 1962.25,
+      "pool_price": 1962.25,
+      "sentiment": 0.0949,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 1619.8868,
+      "passive_value": 1952.8835,
+      "alpha_usd": -332.9967,
+      "agent_fees_usd": 0.767599,
+      "passive_fees_usd": 0.276488,
+      "liq_ratio": 0.45,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.45,
+      "gas_used": 0,
+      "test_eth_fee": 0.0,
+      "txs": []
+    },
+    {
+      "step": 35,
+      "replay_hour_utc": "2026-02-27 12:00",
+      "block": 12012512,
+      "chain_time_utc": "2026-10-28 13:07:48",
+      "market_price": 1960.03,
+      "pool_price": 1960.03,
+      "sentiment": -0.2139,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 1618.9092,
+      "passive_value": 1951.7801,
+      "alpha_usd": -332.8709,
+      "agent_fees_usd": 0.7709,
+      "passive_fees_usd": 0.277956,
+      "liq_ratio": 0.45,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.45,
+      "gas_used": 152443,
+      "test_eth_fee": 1.524e-05,
+      "txs": [
+        {
+          "label": "market move to $1,960.03",
+          "tx": "0x5d5c287a705d060e552957ca9063694cc4b411060dc65bd1f3f6233ae7196cdf",
+          "block": 12012512,
+          "time_utc": "2026-10-28 13:07:48",
+          "gas_used": 152443,
+          "eth_fee": 1.5244302286645e-05,
+          "url": "https://sepolia.etherscan.io/tx/0x5d5c287a705d060e552957ca9063694cc4b411060dc65bd1f3f6233ae7196cdf"
+        }
+      ]
+    },
+    {
+      "step": 36,
+      "replay_hour_utc": "2026-02-27 13:00",
+      "block": 12012513,
+      "chain_time_utc": "2026-10-28 13:08:00",
+      "market_price": 1963.59,
+      "pool_price": 1963.59,
+      "sentiment": -0.4193,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 1620.487,
+      "passive_value": 1953.5546,
+      "alpha_usd": -333.0676,
+      "agent_fees_usd": 0.776302,
+      "passive_fees_usd": 0.280935,
+      "liq_ratio": 0.45,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.45,
+      "gas_used": 152190,
+      "test_eth_fee": 1.522e-05,
+      "txs": [
+        {
+          "label": "market move to $1,963.59",
+          "tx": "0x810a89d54e7ac095b9e3d52960f7c983e5438ec4508303f2961e4fdfb9b067b1",
+          "block": 12012513,
+          "time_utc": "2026-10-28 13:08:00",
+          "gas_used": 152190,
+          "eth_fee": 1.521900228285e-05,
+          "url": "https://sepolia.etherscan.io/tx/0x810a89d54e7ac095b9e3d52960f7c983e5438ec4508303f2961e4fdfb9b067b1"
+        }
+      ]
+    },
+    {
+      "step": 37,
+      "replay_hour_utc": "2026-02-27 14:00",
+      "block": 12012514,
+      "chain_time_utc": "2026-10-28 13:08:12",
+      "market_price": 1943.04,
+      "pool_price": 1943.04,
+      "sentiment": -0.4743,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 1611.3964,
+      "passive_value": 1943.3202,
+      "alpha_usd": -331.9238,
+      "agent_fees_usd": 0.806735,
+      "passive_fees_usd": 0.294462,
+      "liq_ratio": 0.45,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.45,
+      "gas_used": 152515,
+      "test_eth_fee": 1.525e-05,
+      "txs": [
+        {
+          "label": "market move to $1,943.04",
+          "tx": "0x005a3e34597d7b076bc7c09f08df04701ac0fe79f32aacee1f530532b3874790",
+          "block": 12012514,
+          "time_utc": "2026-10-28 13:08:12",
+          "gas_used": 152515,
+          "eth_fee": 1.5251502287725e-05,
+          "url": "https://sepolia.etherscan.io/tx/0x005a3e34597d7b076bc7c09f08df04701ac0fe79f32aacee1f530532b3874790"
+        }
+      ]
+    },
+    {
+      "step": 38,
+      "replay_hour_utc": "2026-02-27 15:00",
+      "block": 12012515,
+      "chain_time_utc": "2026-10-28 13:08:24",
+      "market_price": 1948.71,
+      "pool_price": 1948.71,
+      "sentiment": -0.5944,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 1613.9325,
+      "passive_value": 1946.1579,
+      "alpha_usd": -332.2254,
+      "agent_fees_usd": 0.815463,
+      "passive_fees_usd": 0.299268,
+      "liq_ratio": 0.45,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.45,
+      "gas_used": 152232,
+      "test_eth_fee": 1.522e-05,
+      "txs": [
+        {
+          "label": "market move to $1,948.71",
+          "tx": "0x8a95ec852a357412162fe1245d3d919e8998540f54eb2c3fcb2964e9ecd5bf6a",
+          "block": 12012515,
+          "time_utc": "2026-10-28 13:08:24",
+          "gas_used": 152232,
+          "eth_fee": 1.522320228348e-05,
+          "url": "https://sepolia.etherscan.io/tx/0x8a95ec852a357412162fe1245d3d919e8998540f54eb2c3fcb2964e9ecd5bf6a"
+        }
+      ]
+    },
+    {
+      "step": 39,
+      "replay_hour_utc": "2026-02-27 16:00",
+      "block": 12012516,
+      "chain_time_utc": "2026-10-28 13:08:36",
+      "market_price": 1927.3,
+      "pool_price": 1927.3,
+      "sentiment": -0.7244,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 1604.3769,
+      "passive_value": 1935.453,
+      "alpha_usd": -331.0761,
+      "agent_fees_usd": 0.846949,
+      "passive_fees_usd": 0.313251,
+      "liq_ratio": 0.45,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.45,
+      "gas_used": 152513,
+      "test_eth_fee": 1.525e-05,
+      "txs": [
+        {
+          "label": "market move to $1,927.30",
+          "tx": "0xdba5e57c39c7438172802c724767cd1e8759e8a6e193077bb9bba8bf7a3e4bef",
+          "block": 12012516,
+          "time_utc": "2026-10-28 13:08:36",
+          "gas_used": 152513,
+          "eth_fee": 1.5251302287695e-05,
+          "url": "https://sepolia.etherscan.io/tx/0xdba5e57c39c7438172802c724767cd1e8759e8a6e193077bb9bba8bf7a3e4bef"
+        }
+      ]
+    },
+    {
+      "step": 40,
+      "replay_hour_utc": "2026-02-27 17:00",
+      "block": 12012517,
+      "chain_time_utc": "2026-10-28 13:08:48",
+      "market_price": 1932.33,
+      "pool_price": 1932.33,
+      "sentiment": -0.7943,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 1606.6478,
+      "passive_value": 1937.9809,
+      "alpha_usd": -331.3331,
+      "agent_fees_usd": 0.854807,
+      "passive_fees_usd": 0.317573,
+      "liq_ratio": 0.45,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.45,
+      "gas_used": 152234,
+      "test_eth_fee": 1.522e-05,
+      "txs": [
+        {
+          "label": "market move to $1,932.33",
+          "tx": "0x024d5d8ce5a42e9b78994c6ac11ec83259445c4e3ff613ae4cb93f734fabedb4",
+          "block": 12012517,
+          "time_utc": "2026-10-28 13:08:48",
+          "gas_used": 152234,
+          "eth_fee": 1.522340228351e-05,
+          "url": "https://sepolia.etherscan.io/tx/0x024d5d8ce5a42e9b78994c6ac11ec83259445c4e3ff613ae4cb93f734fabedb4"
+        }
+      ]
+    },
+    {
+      "step": 41,
+      "replay_hour_utc": "2026-02-27 18:00",
+      "block": 12012521,
+      "chain_time_utc": "2026-10-28 13:09:36",
+      "market_price": 1917.92,
+      "pool_price": 1917.92,
+      "sentiment": -0.8241,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 1600.168,
+      "passive_value": 1930.7519,
+      "alpha_usd": -330.5839,
+      "agent_fees_usd": 0.875869,
+      "passive_fees_usd": 0.32692,
+      "liq_ratio": 0.45,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.45,
+      "gas_used": 152501,
+      "test_eth_fee": 1.525e-05,
+      "txs": []
+    },
+    {
+      "step": 42,
+      "replay_hour_utc": "2026-02-27 19:00",
+      "block": 12012522,
+      "chain_time_utc": "2026-10-28 13:09:48",
+      "market_price": 1921.0,
+      "pool_price": 1921.0,
+      "sentiment": -0.8414,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 1601.5669,
+      "passive_value": 1932.304,
+      "alpha_usd": -330.7371,
+      "agent_fees_usd": 0.880728,
+      "passive_fees_usd": 0.329589,
+      "liq_ratio": 0.45,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.45,
+      "gas_used": 152258,
+      "test_eth_fee": 1.523e-05,
+      "txs": [
+        {
+          "label": "market move to $1,921.00",
+          "tx": "0x591688380006575a0f78a2da0b1f49194503b05ac370dc13fdcee3b4ca4907e3",
+          "block": 12012522,
+          "time_utc": "2026-10-28 13:09:48",
+          "gas_used": 152258,
+          "eth_fee": 1.522580228387e-05,
+          "url": "https://sepolia.etherscan.io/tx/0x591688380006575a0f78a2da0b1f49194503b05ac370dc13fdcee3b4ca4907e3"
+        }
+      ]
+    },
+    {
+      "step": 43,
+      "replay_hour_utc": "2026-02-27 20:00",
+      "block": 12012523,
+      "chain_time_utc": "2026-10-28 13:10:00",
+      "market_price": 1923.2,
+      "pool_price": 1923.2,
+      "sentiment": -0.9367,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 1602.5646,
+      "passive_value": 1933.4119,
+      "alpha_usd": -330.8472,
+      "agent_fees_usd": 0.884197,
+      "passive_fees_usd": 0.331495,
+      "liq_ratio": 0.45,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.45,
+      "gas_used": 152218,
+      "test_eth_fee": 1.522e-05,
+      "txs": [
+        {
+          "label": "market move to $1,923.20",
+          "tx": "0xf253c0675c5b47b0859c2efa19a6d34f4e429e7f1adcd650703df77143630f2d",
+          "block": 12012523,
+          "time_utc": "2026-10-28 13:10:00",
+          "gas_used": 152218,
+          "eth_fee": 1.522180228327e-05,
+          "url": "https://sepolia.etherscan.io/tx/0xf253c0675c5b47b0859c2efa19a6d34f4e429e7f1adcd650703df77143630f2d"
+        }
+      ]
+    },
+    {
+      "step": 44,
+      "replay_hour_utc": "2026-02-27 21:00",
+      "block": 12012526,
+      "chain_time_utc": "2026-10-28 13:10:36",
+      "market_price": 1921.26,
+      "pool_price": 1921.26,
+      "sentiment": -0.9891,
+      "action": "Decrease liquidity",
+      "note": "",
+      "agent_value": 1601.5408,
+      "passive_value": 1932.4379,
+      "alpha_usd": -330.8971,
+      "agent_fees_usd": 0.887022,
+      "passive_fees_usd": 0.332748,
+      "liq_ratio": 0.35,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.6,
+      "gas_used": 715665,
+      "test_eth_fee": 7.157e-05,
+      "txs": [
+        {
+          "label": "market move to $1,921.26",
+          "tx": "0x05843ce2aa0b2ffe0bc7eaad2a54842b1c8eb21178364135d64623fdfa5216db",
+          "block": 12012524,
+          "time_utc": "2026-10-28 13:10:12",
+          "gas_used": 152515,
+          "eth_fee": 1.5251502287725e-05,
+          "url": "https://sepolia.etherscan.io/tx/0x05843ce2aa0b2ffe0bc7eaad2a54842b1c8eb21178364135d64623fdfa5216db"
+        },
+        {
+          "label": "AGENT: decrease liquidity",
+          "tx": "0x8081fc007119439965f936bf1aad94978831ae794bc270a38aacd86d08fc28e6",
+          "block": 12012525,
+          "time_utc": "2026-10-28 13:10:24",
+          "gas_used": 413503,
+          "eth_fee": 4.1350306202545e-05,
+          "url": "https://sepolia.etherscan.io/tx/0x8081fc007119439965f936bf1aad94978831ae794bc270a38aacd86d08fc28e6"
+        },
+        {
+          "label": "AGENT: collect",
+          "tx": "0x04a3903933f782edad9113467f92f82853e94c531a48390d8682581b996638b7",
+          "block": 12012526,
+          "time_utc": "2026-10-28 13:10:36",
+          "gas_used": 149647,
+          "eth_fee": 1.4964702244705e-05,
+          "url": "https://sepolia.etherscan.io/tx/0x04a3903933f782edad9113467f92f82853e94c531a48390d8682581b996638b7"
+        }
+      ]
+    },
+    {
+      "step": 45,
+      "replay_hour_utc": "2026-02-27 22:00",
+      "block": 12012526,
+      "chain_time_utc": "2026-10-28 13:10:36",
+      "market_price": 1921.19,
+      "pool_price": 1921.26,
+      "sentiment": -1.0,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 1601.5408,
+      "passive_value": 1932.4379,
+      "alpha_usd": -330.8971,
+      "agent_fees_usd": 0.887022,
+      "passive_fees_usd": 0.332748,
+      "liq_ratio": 0.35,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.6,
+      "gas_used": 0,
+      "test_eth_fee": 0.0,
+      "txs": []
+    },
+    {
+      "step": 46,
+      "replay_hour_utc": "2026-02-27 23:00",
+      "block": 12012527,
+      "chain_time_utc": "2026-10-28 13:10:48",
+      "market_price": 1929.71,
+      "pool_price": 1929.71,
+      "sentiment": -0.9765,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 1605.3647,
+      "passive_value": 1936.6894,
+      "alpha_usd": -331.3247,
+      "agent_fees_usd": 0.896983,
+      "passive_fees_usd": 0.340069,
+      "liq_ratio": 0.35,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.6,
+      "gas_used": 152218,
+      "test_eth_fee": 1.522e-05,
+      "txs": [
+        {
+          "label": "market move to $1,929.71",
+          "tx": "0x5e634a362d661e7c2bf7bb54e71006bbbc5e5aa34354955a04a40a30ed1db9cb",
+          "block": 12012527,
+          "time_utc": "2026-10-28 13:10:48",
+          "gas_used": 152218,
+          "eth_fee": 1.522180228327e-05,
+          "url": "https://sepolia.etherscan.io/tx/0x5e634a362d661e7c2bf7bb54e71006bbbc5e5aa34354955a04a40a30ed1db9cb"
+        }
+      ]
+    },
+    {
+      "step": 47,
+      "replay_hour_utc": "2026-02-28 00:00",
+      "block": 12012528,
+      "chain_time_utc": "2026-10-28 13:11:00",
+      "market_price": 1932.3,
+      "pool_price": 1932.3,
+      "sentiment": -0.8179,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 1606.5338,
+      "passive_value": 1937.9906,
+      "alpha_usd": -331.4568,
+      "agent_fees_usd": 0.900032,
+      "passive_fees_usd": 0.34231,
+      "liq_ratio": 0.35,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.6,
+      "gas_used": 152234,
+      "test_eth_fee": 1.522e-05,
+      "txs": [
+        {
+          "label": "market move to $1,932.30",
+          "tx": "0x10f899b34e598f58c16dffbfbe632e644afa84d0a02bdc231ab353ecb84d63a3",
+          "block": 12012528,
+          "time_utc": "2026-10-28 13:11:00",
+          "gas_used": 152234,
+          "eth_fee": 1.522340228351e-05,
+          "url": "https://sepolia.etherscan.io/tx/0x10f899b34e598f58c16dffbfbe632e644afa84d0a02bdc231ab353ecb84d63a3"
+        }
+      ]
+    },
+    {
+      "step": 48,
+      "replay_hour_utc": "2026-02-28 01:00",
+      "block": 12012529,
+      "chain_time_utc": "2026-10-28 13:11:12",
+      "market_price": 1924.48,
+      "pool_price": 1924.48,
+      "sentiment": -0.7607,
+      "action": "Hold",
+      "note": "",
+      "agent_value": 1603.0181,
+      "passive_value": 1934.0709,
+      "alpha_usd": -331.0528,
+      "agent_fees_usd": 0.909224,
+      "passive_fees_usd": 0.347338,
+      "liq_ratio": 0.35,
+      "agent_range_usd": [
+        1235.2,
+        2882.12
+      ],
+      "in_range": true,
+      "model_cost_usd": 0.6,
+      "gas_used": 152515,
+      "test_eth_fee": 1.525e-05,
+      "txs": [
+        {
+          "label": "market move to $1,924.48",
+          "tx": "0x1328f3ccc5e4793110b0ced30cd09da22778d41a73048a9d2af9938442d6197a",
+          "block": 12012529,
+          "time_utc": "2026-10-28 13:11:12",
+          "gas_used": 152515,
+          "eth_fee": 1.5251502287725e-05,
+          "url": "https://sepolia.etherscan.io/tx/0x1328f3ccc5e4793110b0ced30cd09da22778d41a73048a9d2af9938442d6197a"
+        }
+      ]
+    }
+  ]
+}

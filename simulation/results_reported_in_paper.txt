@@ -1,0 +1,127 @@
+================================================================================
+  AIAMM V13 — EXPERIMENT RESULTS
+  Generated: 2026-05-22
+  5 seeds x 1000 episodes | Real ETH/USDC data (38,495 candles)
+  Weights: W1=0.5714  W2=0.2857  W3=0.0952  W4=0.0476  (sum=1.0)
+  Range half-width: ±40% | MIN_COOLDOWN=10 | Reward clip: [-3, +3]
+================================================================================
+
+--- Per-seed summary ---
+
+  [DDQN]
+    seed 1/5: mean_alpha=-5.89  win=14%  epsilon=0.050
+    seed 2/5: mean_alpha=-6.26  win=12%  epsilon=0.050
+    seed 3/5: mean_alpha=-6.23  win=12%  epsilon=0.050
+    seed 4/5: mean_alpha=-5.76  win=11%  epsilon=0.050
+    seed 5/5: mean_alpha=-7.32  win=12%  epsilon=0.050
+
+  [PPO]
+    seed 1/5: mean_alpha=-7.07  win=7%   epsilon=N/A
+    seed 2/5: mean_alpha=-7.03  win=7%   epsilon=N/A
+    seed 3/5: mean_alpha=-7.02  win=7%   epsilon=N/A
+    seed 4/5: mean_alpha=-7.14  win=6%   epsilon=N/A
+    seed 5/5: mean_alpha=-7.21  win=6%   epsilon=N/A
+
+  [SAC]
+    seed 1/5: mean_alpha=-6.90  win=9%   epsilon=N/A
+    seed 2/5: mean_alpha=-7.16  win=8%   epsilon=N/A
+    seed 3/5: mean_alpha=-6.96  win=9%   epsilon=N/A
+    seed 4/5: mean_alpha=-7.20  win=8%   epsilon=N/A
+    seed 5/5: mean_alpha=-7.34  win=7%   epsilon=N/A
+
+================================================================================
+  TABLE II. Architecture Comparison (5 seeds x 1000 episodes, 95% CI)
+================================================================================
+
+  Metric                           DDQN                       PPO                        SAC
+  --------------------------------------------------------------------------------------------
+  Mean Alpha, all eps ($)          -6.29 [-6.50, -6.09]       -7.09 [-7.23, -6.95]       -7.11 [-7.27, -6.95]
+  Mean Alpha, T=500 eps ($)        -8.62 [-8.96, -8.27]       -9.86 [-10.05, -9.68]      -9.92 [-10.15, -9.69]
+  Terminal Value AI ($)          2005.50 [2001.01, 2009.98]  2004.70 [2000.23, 2009.16]  2004.68 [2000.21, 2009.15]
+  Terminal Value Static ($)      2011.79 [2007.33, 2016.25]  2011.79 [2007.33, 2016.25]  2011.79 [2007.33, 2016.25]
+  IL Change AI-Static (pp)           0.08 [0.07, 0.08]          0.03 [0.03, 0.04]          0.05 [0.05, 0.05]
+  Mean Rebalances/ep               30.87 [30.48, 31.25]       31.48 [31.09, 31.86]       31.49 [31.10, 31.88]
+  Win Rate %, all eps              12.44 [11.52, 13.36]        6.64 [5.95, 7.33]          8.38 [7.61, 9.15]
+  Win Rate %, T=500 eps            12.52 [11.22, 13.82]        4.12 [3.34, 4.90]          6.20 [5.25, 7.15]
+  Alpha Sharpe                     -0.854                      -1.400                      -1.245
+  Alpha Sortino                    -1.311                      -1.735                      -1.627
+
+  One-sample t-tests vs. passive (H0: alpha=0) | Bonferroni alpha=0.0167:
+    DDQN  : t=-60.389,  p_raw=0.0000,  p_adj=0.0000  ***
+    PPO   : t=-98.998,  p_raw=0.0000,  p_adj=0.0000  ***
+    SAC   : t=-88.029,  p_raw=0.0000,  p_adj=0.0000  ***
+
+================================================================================
+  TABLE III. EEC Bisection — DDQN win rate vs passive at multiple T
+================================================================================
+
+       T     AI Value       Static      Alpha     Win%   Sig
+  ----------------------------------------------------------
+      50      2009.81      2010.96      -1.14    30.0%   ***
+     100      2007.78      2009.41      -1.63    16.0%   ***
+     200      1999.87      2003.50      -3.63    10.0%   ***
+     300      1994.70      2000.06      -5.36     2.0%   ***
+     500      1968.44      1974.53      -6.09    24.0%   ***
+
+================================================================================
+  TABLE IV. Illustrative Heuristic Comparison — Trending Regime
+  (Last T=500 episode; real ETH/USDC data, trending price path)
+================================================================================
+
+  Strategy               Final Value    Mean IL (%)   Fees ($)
+  ------------------------------------------------------------
+  Passive                   1997.08        -0.024%       9.18
+  Heuristic                 1996.62        -0.024%       9.33
+  DDQN (AIAMM)              1966.13        -0.055%       7.16
+
+================================================================================
+  TABLE IVb. Illustrative Comparison — High-Volatility GBM Regime
+  (sigma=0.035 per step; trained DDQN evaluated in inference mode)
+================================================================================
+
+  Strategy               Final Value    Mean IL (%)   Fees ($)
+  ------------------------------------------------------------
+  Passive                   2993.61        -4.230%      29.27
+  Heuristic                 3134.93        -1.315%      13.31
+  DDQN (AIAMM)              3123.12        -1.370%      10.70
+
+  Alpha (DDQN - Passive): +129.51  [probe_seed=7654756, probe=3]
+
+================================================================================
+  TABLE V. GBM Sensitivity Analysis — DDQN, T=500 eval phase
+  (5 seeds x 100 eval eps per sigma, Bonferroni alpha_adj=0.0100)
+================================================================================
+
+  Per-seed detail:
+    sigma=0.005 (Low):      -9.02 | -10.81 | -9.07 | -9.71 | -9.64
+    sigma=0.010 (Moderate): -6.32 |  -9.58 | -4.16 | -8.27 | -7.77
+    sigma=0.015 (Baseline): +0.96 |  -1.76 | +4.55 | -1.52 | -1.47
+    sigma=0.030 (High):    +75.24 | +46.10 |+66.24 |+45.20 |+35.29
+    sigma=0.050 (Stress): +335.07 |+207.48 |+344.81|+210.21|+106.77
+
+     Sigma      Regime   Mean alpha ($)        95% CI              Sortino     Win%     p_adj   Sig
+  ----------------------------------------------------------------------------------------------------
+     0.005         Low            -9.65  [  -9.93,   -9.38]        -3.427     1.0%    0.0000   ***
+     0.010    Moderate            -7.22  [  -8.09,   -6.35]        -1.877    10.4%    0.0000   ***
+     0.015    Baseline            +0.15  [  -2.23,   +2.54]         0.034    29.2%    1.0000    ns
+     0.030        High           +53.62  [ +39.41,  +67.82]         8.116    58.6%    0.0000   ***
+     0.050      Stress          +240.87  [+159.35, +322.39]        29.543    67.0%    0.0000   ***
+
+================================================================================
+  PAPER-READY SUMMARY
+================================================================================
+
+  DDQN  : alpha=-6.29  [95%CI -6.50, -6.09]  Sharpe=-0.854  Sortino=-1.311  Win=12.4%
+  PPO   : alpha=-7.09  [95%CI -7.23, -6.95]  Sharpe=-1.400  Sortino=-1.735  Win=6.6%
+  SAC   : alpha=-7.11  [95%CI -7.27, -6.95]  Sharpe=-1.245  Sortino=-1.627  Win=8.4%
+
+================================================================================
+  OUTPUT FILES
+================================================================================
+
+  AIAMMv11_fig1.png              — Alpha distribution & rolling win rate (300 DPI)
+  AIAMMv11_fig2.png              — EEC bisection & DDQN per-episode alpha (300 DPI)
+  AIAMMv11_fig3.png              — Baseline comparison & cumulative reward (300 DPI)
+  AIAMMv13_fig4_sensitivity.png  — GBM sensitivity analysis Fig. 4 (300 DPI)
+
+================================================================================
